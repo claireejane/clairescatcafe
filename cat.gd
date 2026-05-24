@@ -6,6 +6,7 @@ var current_need
 var needs_generated := false
 var happiness : float = 100
 @onready var animated_sprite = $CatBubble
+@onready var white_happiness_bar = $WhiteCatBar
 
 
 func _ready() -> void:
@@ -22,6 +23,7 @@ func _on_click_area_input_event(viewport: Viewport, event: InputEvent, shape_idx
 			needs_generated = false
 
 func _process(delta: float) -> void:
+	white_happiness_bar.value = happiness
 	happiness -= delta * 1
 	print(happiness)
 	if happiness < 75 and needs_generated == false:
