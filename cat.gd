@@ -16,16 +16,15 @@ func _ready() -> void:
 
 func _on_click_area_input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
-		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT and happiness < 75:
 			happiness = 100
 			animated_sprite.hide()
 			current_need = ""
 			needs_generated = false
 
 func _process(delta: float) -> void:
-	white_happiness_bar.value = happiness
 	happiness -= delta * 1
-	print(happiness)
+	update_happiness_bar()
 	if happiness < 75 and needs_generated == false:
 		animated_sprite.show()
 		animated_sprite.play("generate")
@@ -36,3 +35,8 @@ func _on_cat_bubble_animation_finished() -> void:
 	if animated_sprite.animation == "generate":
 		animated_sprite.play(current_need)	
 		
+func update_happiness_bar() -> void:
+	white_happiness_bar.value = happiness
+	var green = 0 + happiness/100
+	var red = 1 - happiness / 100
+	white_happiness_bar.set_tint_progress(Color(red, green, 0))
