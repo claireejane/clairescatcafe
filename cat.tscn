@@ -4,15 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dkvj14wsu5els" path="res://assets/New Piskel-1.png (1).png" id="2_ma4b3"]
 [ext_resource type="Texture2D" uid="uid://bdw5iytc6cho5" path="res://assets/catbubbleframes (1).png" id="3_y5qyo"]
 [ext_resource type="Texture2D" uid="uid://b8dcndbmnb4xs" path="res://assets/New Piskel-1.png.png" id="4_a4aqe"]
-[ext_resource type="Texture2D" uid="uid://c2tschtn5cr62" path="res://assets/taskbar/progressuncolered.png" id="4_giwe8"]
 [ext_resource type="Texture2D" uid="uid://b1w1mwb8yonwy" path="res://assets/New Piskel-1.png (3).png" id="5_vpob0"]
 [ext_resource type="Texture2D" uid="uid://h3r3t4e1o3oy" path="res://assets/New Piskel-1.png (2).png" id="6_2qa85"]
 [ext_resource type="Texture2D" uid="uid://tdjq5f1ms42u" path="res://assets/cat.png" id="7_d1qol"]
-[ext_resource type="Texture2D" uid="uid://drgcpmgsuhd1q" path="res://assets/taskbar/underwhitecat.png" id="8_73ra0"]
-[ext_resource type="Texture2D" uid="uid://b608jqebaathg" path="res://assets/taskbar/overwhitecat.png" id="9_thjh7"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_giwe8"]
-radius = 27.254307
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gc3b3"]
 atlas = ExtResource("2_ma4b3")
@@ -135,24 +129,7 @@ animations = [{
 radius = 8.547012
 
 [node name="Cat" type="CharacterBody2D" unique_id=596384198]
-z_as_relative = false
-y_sort_enabled = true
 script = ExtResource("1_giwe8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1689952216]
-position = Vector2(153.99997, -4)
-scale = Vector2(0.9994339, 0.49978405)
-shape = SubResource("CircleShape2D_giwe8")
-
-[node name="WhiteCatBar" type="TextureProgressBar" parent="." unique_id=1405217350]
-offset_left = 249.00002
-offset_top = 195.0
-offset_right = 825.0
-offset_bottom = 483.0
-scale = Vector2(0.55524105, 0.5553156)
-texture_under = ExtResource("8_73ra0")
-texture_over = ExtResource("9_thjh7")
-texture_progress = ExtResource("4_giwe8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1082148249]
 

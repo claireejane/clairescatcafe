@@ -3,11 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://biu0m57x75g3q" path="res://assets/cafe/Cafe/Floors&Walls/floor200%.png" id="1_5chmy"]
 [ext_resource type="PackedScene" uid="uid://d3efcr11rkdl8" path="res://assets/player.tscn" id="1_f6w01"]
 [ext_resource type="PackedScene" uid="uid://bqqu3sko0wkv1" path="res://cat_tree.tscn" id="1_xhqke"]
-[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cat.tscn" id="5_5chmy"]
 [ext_resource type="Texture2D" uid="uid://yjb04txglcnd" path="res://assets/cafe/Cafe/Floors&Walls/wall1.png" id="6_8ejhe"]
-[ext_resource type="Script" uid="uid://yeck78mhl2sw" path="res://door.gd" id="7_yg5ku"]
+[ext_resource type="Texture2D" uid="uid://drgcpmgsuhd1q" path="res://assets/taskbar/underwhitecat.png" id="7_5f1xq"]
 [ext_resource type="Texture2D" uid="uid://blu45ltli2fus" path="res://assets/sample img-1.png.png" id="8_5f1xq"]
 [ext_resource type="Texture2D" uid="uid://b3ulv2neprow3" path="res://assets/cafe/Cafe/Floors&Walls/wall3.png" id="8_23r33"]
+[ext_resource type="Texture2D" uid="uid://b608jqebaathg" path="res://assets/taskbar/overwhitecat.png" id="8_n2cq5"]
+[ext_resource type="Texture2D" uid="uid://c2tschtn5cr62" path="res://assets/taskbar/progressuncolered.png" id="9_8ejhe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yg5ku"]
 texture = ExtResource("1_5chmy")
@@ -1257,7 +1258,7 @@ size = Vector2(294.00003, 490.75)
 y_sort_enabled = true
 
 [node name="Player" parent="." unique_id=2088908881 instance=ExtResource("1_f6w01")]
-position = Vector2(110, -127)
+position = Vector2(110, -25)
 
 [node name="Camera2D2" type="Camera2D" parent="Player" unique_id=870766350]
 
@@ -1273,14 +1274,10 @@ tile_set = SubResource("TileSet_8ejhe")
 
 [node name="CatTree" parent="." unique_id=372260949 instance=ExtResource("1_xhqke")]
 z_as_relative = false
-y_sort_enabled = true
 position = Vector2(123, -6)
 scale = Vector2(0.5, 0.5)
 
-[node name="Cat" parent="." unique_id=596384198 instance=ExtResource("5_5chmy")]
-
 [node name="Door" type="Area2D" parent="." unique_id=1399295481]
-script = ExtResource("7_yg5ku")
 
 [node name="DoorIn" type="CollisionShape2D" parent="Door" unique_id=886205762]
 position = Vector2(7.3125, -258.5)
@@ -1292,5 +1289,18 @@ shape = SubResource("RectangleShape2D_n2cq5")
 position = Vector2(12, -258)
 scale = Vector2(0.703125, 0.6944444)
 texture = ExtResource("8_5f1xq")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1406849162]
+
+[node name="WhiteCatBar" type="TextureProgressBar" parent="UI" unique_id=881756574]
+unique_name_in_owner = true
+offset_left = 808.0
+offset_top = 501.0
+offset_right = 1384.0
+offset_bottom = 789.0
+scale = Vector2(0.55524105, 0.5553156)
+texture_under = ExtResource("7_5f1xq")
+texture_over = ExtResource("8_n2cq5")
+texture_progress = ExtResource("9_8ejhe")
 
 [connection signal="body_entered" from="Door" to="Player" method="_on_door_body_entered"]

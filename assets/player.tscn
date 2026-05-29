@@ -145,15 +145,17 @@ height = 88.0
 [node name="Player" type="CharacterBody2D" unique_id=2088908881]
 z_as_relative = false
 y_sort_enabled = true
+position = Vector2(-1, 0)
 script = ExtResource("1_3mip4")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="." unique_id=660809475]
-position = Vector2(-96, 0)
+position = Vector2(1.5, -67.5)
 sprite_frames = SubResource("SpriteFrames_ilixg")
 animation = &"down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1579546057]
-position = Vector2(-97, 28)
+position = Vector2(0.5, -39.5)
 shape = SubResource("CapsuleShape2D_8i2kb")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=76059937]
+position = Vector2(1, -73)

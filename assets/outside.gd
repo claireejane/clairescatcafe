@@ -1,16 +1,10 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
+@export var cat_data: Array[CatData] = []
+
+
 func _ready() -> void:
-	self.hide()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	
-func go_outside() -> void:
-	self.show()
-
-func go_inside() -> void:
-	pass
+	for data in cat_data:
+		var new_cat = data.scene.instantiate()
+		add_child(new_cat)

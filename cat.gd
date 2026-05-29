@@ -6,7 +6,7 @@ var current_need
 var needs_generated := false
 var happiness : float = 100
 @onready var animated_sprite = $CatBubble
-@onready var white_happiness_bar = $WhiteCatBar
+@onready var white_happiness_bar = %WhiteCatBar
 
 
 func _ready() -> void:
