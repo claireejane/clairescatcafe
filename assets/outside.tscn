@@ -4,11 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://yciwojrrnadn" path="res://assets/sample img-1.png (2).png" id="1_oysq7"]
 [ext_resource type="Texture2D" uid="uid://bnlxwka2fr1e6" path="res://assets/cafe/Cafe/Untitled_Artwork-3.png" id="1_vt2ta"]
 [ext_resource type="Texture2D" uid="uid://catx7aahqwbrr" path="res://assets/New Piskel-1.png (7).png" id="2_frjmp"]
-[ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cat_data.gd" id="2_hm0gs"]
-[ext_resource type="Resource" uid="uid://b05voewlgcovw" path="res://white_cat.tres" id="3_4huw0"]
+[ext_resource type="Script" uid="uid://cx84w6sjj6o6r" path="res://assets/outside_cat.gd" id="3_mbcpo"]
 [ext_resource type="Texture2D" uid="uid://nvoncihraujw" path="res://assets/New Piskel-1.png (9).png" id="3_oysq7"]
 [ext_resource type="PackedScene" uid="uid://d3efcr11rkdl8" path="res://assets/player.tscn" id="5_ahhiw"]
-[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cat.tscn" id="6_ahhiw"]
+[ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="7_n3pw3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3pw3"]
 texture = ExtResource("1_vt2ta")
@@ -102,17 +101,13 @@ sources/3 = SubResource("TileSetAtlasSource_hm0gs")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hm0gs"]
 size = Vector2(253.00008, 347.375)
 
-[sub_resource type="Curve2D" id="Curve2D_n3pw3"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -614, -395, 0, 0, 0, 0, -267, -375, 0, 0, 0, 0, -157, -412, 0, 0, 0, 0, -94, -527, 0, 0, 0, 0, -110, -659, 0, 0, 0, 0, -124, -794, 0, 0, 0, 0, -247, -845, 0, 0, 0, 0, -487, -868, 0, 0, 0, 0, -729, -861, 0, 0, 0, 0, -886, -858, 0, 0, 0, 0, -1066, -850, 0, 0, 0, 0, -1128, -827, 0, 0, 0, 0, -1175, -675, 0, 0, 0, 0, -1161, -493, 0, 0, 0, 0, -1092, -334, 0, 0, 0, 0, -1110, -264, 0, 0, 0, 0, -1103, -138, 0, 0, 0, 0, -1117, -19, 0, 0, 0, 0, -1112, 128, 0, 0, 0, 0, -1117, 245, 0, 0, 0, 0, -952, 290, 0, 0, 0, 0, -543, 248, 0, 0, 0, 0, -194, 231, 0, 0, 0, 0, 221, 134, 0, 0, 0, 0, 203, -25, 0, 0, 0, 0, 357, -152, 0, 0, 0, 0, 404, -268, 0, 0, 0, 0, 210, -207, 0, 0, 0, 0, 66, -180, 0, 0, 0, 0, 48, 3, 0, 0, 0, 0, 34, 68, 0, 0, 0, 0, -129, 92, 0, 0, 0, 0, -264, 90, 0, 0, 0, 0, -263, -117, 0, 0, 0, 0, -272, -213, 0, 0, 0, 0, -469, -207, 0, 0, 0, 0, -634, -222, 0, 0, 0, 0, -849, 14, 0, 0, 0, 0, -614, -395, 0, 0, 0, 0, 83, -468, 0, 0, 0, 0, 240, -558, 0, 0, 0, 0, 218, -624, 0, 0, 0, 0, 116, -574, 0, 0, 0, 0, 176, -433, 0, 0, 0, 0, 316, -350, 0, 0, 0, 0, 609, -398, 0, 0, 0, 0, 657, -534, 0, 0, 0, 0, 502, -572, 0, 0, 0, 0, 367, -578, 0, 0, 0, 0, 263, -448, 0, 0, 0, 0, 90, -308, 0, 0, 0, 0, -3, -279, 0, 0, 0, 0, -131, -453, 0, 0, 0, 0, -10, -635, 0, 0, 0, 0, 36, -674, 0, 0, 0, 0, -567, 135, 0, 0, 0, 0, 439, 54, 0, 0, 0, 0, 502, 151, 0, 0, 0, 0, 443, 239, 0, 0, 0, 0, 316, 187, 0, 0, 0, 0, 328, 75, 0, 0, 0, 0, 580, 19, 0, 0, 0, 0, -614, -395, 0, 0, 0, 0, -918, -224, 0, 0, 0, 0, -938, -310, 0, 0, 0, 0, -793, -353, 0, 0, 0, 0, -751, -228, 0, 0, 0, 0, -935, -45, 0, 0, 0, 0, -1065, -45, 0, 0, 0, 0, -1006, -403, 0, 0, 0, 0, -619, -4, 0, 0, 0, 0, -78, 329, 0, 0, 0, 0, -829, 230, 0, 0, 0, 0, -788, 192, 0, 0, 0, 0, 201, 250, 0, 0, 0, 0, 553, -235, 0, 0, 0, 0, 373, -701, 0, 0, 0, 0, -109, -64, 0, 0, 0, 0, -614, -395)
-}
-point_count = 79
-
 [node name="Outside" type="Node2D" unique_id=1225810967]
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_n3pw3")
-cat_data = Array[ExtResource("2_hm0gs")]([ExtResource("3_4huw0")])
+
+[node name="OutsideCat" parent="." unique_id=8565619 instance=ExtResource("7_n3pw3")]
+script = ExtResource("3_mbcpo")
 
 [node name="Cafe" type="StaticBody2D" parent="." unique_id=2059951671]
 z_as_relative = false
@@ -151,14 +146,6 @@ shape = SubResource("RectangleShape2D_hm0gs")
 
 [node name="CatTimer" type="Timer" parent="." unique_id=539272309]
 
-[node name="Cat" parent="." unique_id=596384198 instance=ExtResource("6_ahhiw")]
-position = Vector2(-161, -354)
-
-[node name="Path2D" type="Path2D" parent="." unique_id=432496368]
-curve = SubResource("Curve2D_n3pw3")
-
-[node name="CatSpawn" type="PathFollow2D" parent="Path2D" unique_id=1786633573]
-position = Vector2(-614, -395)
-rotation = 0.05757319
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=138585437]
 
 [connection signal="body_entered" from="Door" to="Player" method="_on_door_body_entered"]

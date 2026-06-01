@@ -1,18 +1,21 @@
 extends CharacterBody2D
 
-
+@export var cat_data: CatData
 @onready var needs: Array[String] = ["water", "love", "play", "food"]
 var current_need
 var needs_generated := false
-var happiness : float = 100
+var happiness : float = cat_data.starting_happiness
 @onready var animated_sprite = $CatBubble
 @onready var white_happiness_bar = %WhiteCatBar
+@onready var sprite = $Sprite2D
 
 
 func _ready() -> void:
 	animated_sprite.hide()
 	$ClickArea.input_event.connect(_on_click_area_input_event)
 	animated_sprite.animation_finished.connect(_on_cat_bubble_animation_finished)
+	if cat_data:
+		sprite.texture = cat_data.loaf
 
 func _on_click_area_input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
@@ -23,7 +26,8 @@ func _on_click_area_input_event(viewport: Viewport, event: InputEvent, shape_idx
 			needs_generated = false
 
 func _process(delta: float) -> void:
-	happiness -= delta * 1
+	var difficulty = (100 - cat_data.spawn_weight)*0.1
+	happiness -= delta * difficulty
 	update_happiness_bar()
 	if happiness < 75 and needs_generated == false:
 		animated_sprite.show()

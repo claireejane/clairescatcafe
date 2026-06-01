@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cv1qdxsxd3vu6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rlrvp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2slrp"]
+
+[node name="OutsideCat" type="CharacterBody2D" unique_id=8565619]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=784723142]
+shape = SubResource("CircleShape2D_rlrvp")
+
+[node name="Loaf" type="Sprite2D" parent="." unique_id=881320901]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1103781344]
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1887631805]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1510386758]
+shape = SubResource("CircleShape2D_2slrp")
