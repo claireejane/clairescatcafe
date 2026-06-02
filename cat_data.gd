@@ -8,7 +8,7 @@ extends Resource
 @export var loaf: Texture2D
 @export var happiness_bar_overlay: Texture2D
 @export var outside_scene: PackedScene
-@export var inside_scene: PackedScene
+
 
 @export var spawn_weight: int # How rare the cat's spawn is
 @export var cafe_value: int

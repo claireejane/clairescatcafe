@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://crogbapoiynm7" path="res://miffy.tres" id="4_15afe"]
 [ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://trixie.tres" id="5_a0svq"]
 [ext_resource type="PackedScene" uid="uid://d3efcr11rkdl8" path="res://assets/player.tscn" id="5_ahhiw"]
+[ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="7_n3pw3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3pw3"]
 texture = ExtResource("1_vt2ta")
@@ -112,7 +113,9 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-1158, -868, -34, -908,
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_n3pw3")
-possible_cats = Array[ExtResource("2_hm0gs")]([ExtResource("4_15afe"), ExtResource("3_pipfy"), ExtResource("5_a0svq")])
+possible_cats = Array[ExtResource("2_hm0gs")]([ExtResource("3_pipfy"), ExtResource("4_15afe"), ExtResource("5_a0svq")])
+
+[node name="OutsideCat" parent="." unique_id=8565619 instance=ExtResource("7_n3pw3")]
 
 [node name="Cafe" type="StaticBody2D" parent="." unique_id=2059951671]
 z_as_relative = false
@@ -150,7 +153,7 @@ scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_hm0gs")
 
 [node name="CatTimer" type="Timer" parent="." unique_id=539272309]
-wait_time = 6.0
+wait_time = 5.0
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=138585437]
 navigation_polygon = SubResource("NavigationPolygon_n3pw3")
