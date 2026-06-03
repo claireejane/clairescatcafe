@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c43htjkg3afel"]
+
+[ext_resource type="Script" uid="uid://bu4x5rlc14l02" path="res://assets/global_ui.gd" id="1_i8656"]
+[ext_resource type="Texture2D" uid="uid://6rujp56e0w00" path="res://assets/cat-1.png (3).png" id="2_kvwha"]
+[ext_resource type="FontFile" uid="uid://cell1kiuffrf7" path="res://assets/ithaca-font/Ithaca-LVB75.ttf" id="3_w5o01"]
+
+[node name="GlobalUI" type="CanvasLayer" unique_id=109021020]
+script = ExtResource("1_i8656")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=400165827]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_kvwha")
+
+[node name="Title" type="Label" parent="TextureRect" unique_id=170511713]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 416.0
+offset_right = 1230.0
+offset_bottom = 512.0
+theme_override_colors/font_color = Color(0.6300028, 0.4706776, 0.29340822, 1)
+theme_override_fonts/font = ExtResource("3_w5o01")
+theme_override_font_sizes/font_size = 109
+text = "Cats Found"
+horizontal_alignment = 1
+vertical_alignment = 1

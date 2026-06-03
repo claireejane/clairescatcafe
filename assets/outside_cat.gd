@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var navigation_agent = $NavigationAgent2D
 @onready var next_position
 @onready var sprite: Sprite2D = $Loaf
+signal cat_found(cat_data: CatData)
 
 const SPEED = 300.0
 var player_near : bool = false
@@ -25,7 +26,8 @@ func _physics_process(delta: float) -> void:
 		velocity = direction * SPEED
 		move_and_slide()
 	if Input.is_action_just_pressed("get") and player_near == true:
-		self.hide()
+		cat_found.emit(cat_data)
+		hide()
 	next_position = navigation_agent.get_next_path_position()
 
 func _on_interaction_area_body_exited(body: Node2D) -> void:
