@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dv1h2nwd3iydf"]
+
+[ext_resource type="Script" uid="uid://ccnk0hoqy8tfh" path="res://cat_slot.gd" id="1_83tk7"]
+
+[node name="CatSlot" type="Control" unique_id=1792313149]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_83tk7")
+
+[node name="Icon" type="TextureRect" parent="." unique_id=428407696]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

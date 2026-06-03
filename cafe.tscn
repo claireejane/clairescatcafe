@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://biu0m57x75g3q" path="res://assets/cafe/Cafe/Floors&Walls/floor200%.png" id="1_5chmy"]
 [ext_resource type="PackedScene" uid="uid://d3efcr11rkdl8" path="res://assets/player.tscn" id="1_f6w01"]
-[ext_resource type="Script" uid="uid://bg7yrl2hh3rvv" path="res://cafe.gd" id="1_n2cq5"]
+[ext_resource type="Script" path="res://cafe.gd" id="1_n2cq5"]
 [ext_resource type="PackedScene" uid="uid://bqqu3sko0wkv1" path="res://cat_tree.tscn" id="1_xhqke"]
 [ext_resource type="Texture2D" uid="uid://yjb04txglcnd" path="res://assets/cafe/Cafe/Floors&Walls/wall1.png" id="6_8ejhe"]
 [ext_resource type="Texture2D" uid="uid://drgcpmgsuhd1q" path="res://assets/taskbar/underwhitecat.png" id="7_5f1xq"]

@@ -1,18 +1,15 @@
 [gd_scene format=3 uid="uid://bujsk81u7xqqg"]
 
-[ext_resource type="PackedScene" uid="uid://ducjqrj35iyit" path="res://cafe.tscn" id="1_f3fhv"]
 [ext_resource type="Script" uid="uid://ca27kstq77x0s" path="res://assets/game.gd" id="1_n5ebr"]
 [ext_resource type="PackedScene" uid="uid://on6ocmprdqeb" path="res://assets/outside.tscn" id="2_0aill"]
 [ext_resource type="PackedScene" uid="uid://c43htjkg3afel" path="res://assets/global_ui.tscn" id="4_lpx4e"]
 [ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cat_data.gd" id="6_8i2kb"]
 [ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://trixie.tres" id="7_i7qel"]
 [ext_resource type="Resource" uid="uid://v566jygbayd6" path="res://lily.tres" id="8_x2kra"]
-[ext_resource type="Resource" uid="uid://crogbapoiynm7" path="res://miffy.tres" id="9_f65cq"]
+[ext_resource type="Resource" uid="uid://crogbapoiynm7" path="res://mochi.tres" id="9_f65cq"]
 
 [node name="Game" type="Node2D" unique_id=1386217610]
 script = ExtResource("1_n5ebr")
-
-[node name="Cafe" parent="." unique_id=1071049736 instance=ExtResource("1_f3fhv")]
 
 [node name="Outside" parent="." unique_id=1225810967 instance=ExtResource("2_0aill")]
 

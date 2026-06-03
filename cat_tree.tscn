@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://csentgoitux3" path="res://assets/cattreebrown.png" id="4_au45u"]
 [ext_resource type="Texture2D" uid="uid://08l2wanxlj6e" path="res://assets/cattreepink.png" id="5_iyvfl"]
 [ext_resource type="Texture2D" uid="uid://co7bok03jdoqy" path="res://assets/cattreewhite.png" id="6_1k31j"]
-[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cat.tscn" id="7_024ig"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y5oud"]
 size = Vector2(202, 85)
@@ -22,7 +21,3 @@ shape = SubResource("RectangleShape2D_y5oud")
 [node name="Beige" type="Sprite2D" parent="." unique_id=1630990072]
 position = Vector2(0, -112)
 texture = ExtResource("1_cdlbo")
-
-[node name="Cat" parent="." unique_id=596384198 instance=ExtResource("7_024ig")]
-position = Vector2(-170, -90)
-scale = Vector2(1.5, 1.5)

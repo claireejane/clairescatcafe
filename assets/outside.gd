@@ -4,7 +4,7 @@ extends Node2D
 @export var possible_cats: Array[CatData] = []
 @onready var spawn_points: Array[Marker2D] = [$Spawn1, $Spawn2, $Spawn3]
 @onready var timer: Timer = $CatTimer
-@onready var ui: CanvasLayer = $"GlobalUI"
+@onready var ui: CanvasLayer = $ "../GlobalUI"
 
 func _ready() -> void:
 	timer.start()

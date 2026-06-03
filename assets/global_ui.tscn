@@ -3,16 +3,27 @@
 [ext_resource type="Script" uid="uid://bu4x5rlc14l02" path="res://assets/global_ui.gd" id="1_i8656"]
 [ext_resource type="Texture2D" uid="uid://6rujp56e0w00" path="res://assets/cat-1.png (3).png" id="2_kvwha"]
 [ext_resource type="FontFile" uid="uid://cell1kiuffrf7" path="res://assets/ithaca-font/Ithaca-LVB75.ttf" id="3_w5o01"]
+[ext_resource type="PackedScene" uid="uid://dv1h2nwd3iydf" path="res://cat_slot.tscn" id="4_kvwha"]
+[ext_resource type="Resource" uid="uid://v566jygbayd6" path="res://lily.tres" id="5_20t6b"]
+[ext_resource type="Resource" uid="uid://crogbapoiynm7" path="res://mochi.tres" id="6_g5w5u"]
+[ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://trixie.tres" id="7_564j2"]
 
 [node name="GlobalUI" type="CanvasLayer" unique_id=109021020]
 script = ExtResource("1_i8656")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=400165827]
+[node name="CatMenuPanel" type="Control" parent="." unique_id=1622104395]
+layout_mode = 3
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="CatMenuPanel" unique_id=400165827]
+layout_mode = 0
+offset_right = 2100.0
+offset_bottom = 1512.0
 texture = ExtResource("2_kvwha")
 
-[node name="Title" type="Label" parent="TextureRect" unique_id=170511713]
+[node name="Title" type="Label" parent="CatMenuPanel/TextureRect" unique_id=170511713]
 layout_mode = 0
 offset_left = 848.0
 offset_top = 416.0
@@ -24,3 +35,35 @@ theme_override_font_sizes/font_size = 109
 text = "Cats Found"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CatSlotHolder" type="Control" parent="CatMenuPanel" unique_id=1194666576]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CatSlotLily" parent="CatMenuPanel/CatSlotHolder" unique_id=1792313149 instance=ExtResource("4_kvwha")]
+layout_mode = 0
+offset_left = 2869.933
+offset_top = 3124.1145
+offset_right = 2909.933
+offset_bottom = 3164.1145
+scale = Vector2(6.5524554, 4.711361)
+cat_data = ExtResource("5_20t6b")
+
+[node name="CatSlotMochi" parent="CatMenuPanel/CatSlotHolder" unique_id=1088873848 instance=ExtResource("4_kvwha")]
+layout_mode = 0
+offset_left = 644.0
+offset_top = 547.0
+offset_right = 684.0
+offset_bottom = 587.0
+scale = Vector2(6.5524554, 4.711361)
+cat_data = ExtResource("6_g5w5u")
+
+[node name="CatSlotTrixie" parent="CatMenuPanel/CatSlotHolder" unique_id=217738652 instance=ExtResource("4_kvwha")]
+layout_mode = 0
+offset_left = 911.00006
+offset_top = 547.00006
+offset_right = 951.00006
+offset_bottom = 587.00006
+scale = Vector2(6.5524554, 4.711361)
+cat_data = ExtResource("7_564j2")
