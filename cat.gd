@@ -8,7 +8,7 @@ var needs_generated := false
 @onready var white_happiness_bar = $"../UI/WhiteCatBar"
 @onready var sprite = $Sprite2D
 @onready var happiness : float = cat_data.starting_happiness
-
+@export var color_transition: Gradient 
 
 func _ready() -> void:
 	animated_sprite.hide()
@@ -41,6 +41,5 @@ func _on_cat_bubble_animation_finished() -> void:
 		
 func update_happiness_bar() -> void:
 	white_happiness_bar.value = happiness
-	var green = 0 + happiness/100
-	var red = 1 - happiness / 100
-	white_happiness_bar.set_tint_progress(Color(red, green, 0))
+	var color := color_transition.sample(happiness/100) 
+	white_happiness_bar.set_tint_progress(color)

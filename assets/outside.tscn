@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cat_data.gd" id="2_hm0gs"]
 [ext_resource type="Texture2D" uid="uid://nvoncihraujw" path="res://assets/New Piskel-1.png (9).png" id="3_oysq7"]
 [ext_resource type="Resource" uid="uid://v566jygbayd6" path="res://lily.tres" id="3_pipfy"]
-[ext_resource type="Resource" path="res://mochi.tres" id="4_hm0gs"]
+[ext_resource type="Resource" uid="uid://crogbapoiynm7" path="res://mochi.tres" id="4_hm0gs"]
 [ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://trixie.tres" id="5_a0svq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3pw3"]

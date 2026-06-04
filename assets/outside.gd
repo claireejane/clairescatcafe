@@ -19,7 +19,7 @@ func _spawn_cat() -> void:
 	print(chosen_cat_data.outside_scene)
 	var new_cat = chosen_cat_data.outside_scene.instantiate()
 	new_cat.cat_data = chosen_cat_data
-	new_cat.cat_found.connect(ui.on_cat_found) #when this spawned cat does cat_found, call _on_cat_found)
+	new_cat.cat_found.connect(ui.on_cat_found) #when this spawned cat does cat_found, call on_cat_found)
 	var spawn_point = spawns.get_children().pick_random()
 	add_child(new_cat)
 	new_cat.global_position = spawn_point.global_position

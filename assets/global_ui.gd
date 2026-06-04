@@ -28,6 +28,8 @@ func toggle_inv() -> void:
 func on_cat_found(found_cat_data: CatData) -> void:
 	if found_cat_data not in cat_inventory:
 		cat_inventory.append(found_cat_data)
+		print("added new cat")
+		print(found_cat_data.name)
 		for slot in cat_slots.get_children():
 			if slot.cat_data == found_cat_data:
 				slot.set_found(found_cat_data)

@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://h3r3t4e1o3oy" path="res://assets/New Piskel-1.png (2).png" id="6_2qa85"]
 [ext_resource type="Texture2D" uid="uid://tdjq5f1ms42u" path="res://assets/cat.png" id="7_d1qol"]
 
+[sub_resource type="Gradient" id="Gradient_2v165"]
+offsets = PackedFloat32Array(0, 0.50617284, 1)
+colors = PackedColorArray(1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_gc3b3"]
 atlas = ExtResource("2_ma4b3")
 region = Rect2(0, 0, 96, 96)
@@ -130,6 +134,7 @@ radius = 8.547012
 
 [node name="InsideCat" type="CharacterBody2D" unique_id=596384198]
 script = ExtResource("1_giwe8")
+color_transition = SubResource("Gradient_2v165")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1082148249]
 
