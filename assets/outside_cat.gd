@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var next_position
 @onready var sprite: Sprite2D = $Loaf
 signal cat_found(cat_data: CatData)
+@onready var player: CharacterBody2D = $"../../Player"
 
 const SPEED = 300.0
 var player_near : bool = false
@@ -27,17 +28,19 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 	if Input.is_action_just_pressed("get") and player_near == true:
 		cat_found.emit(cat_data)
+		print("should have found")
 		hide()
 	next_position = navigation_agent.get_next_path_position()
 
 func _on_interaction_area_body_exited(body: Node2D) -> void:
-	if player_near == true:
+	if body == player and player_near == true:
 		player_near = false
+		print("player not near")
 
-
-func _on_interaction_area_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	if player_near == false:
+func _on_interaction_area_body_entered(body: Node2D) -> void:
+	if body == player and player_near == false:
 		player_near = true
+		print("player near")
 
 func pick_new_target() -> void:
 	var random_x = randf_range(-200, 200)

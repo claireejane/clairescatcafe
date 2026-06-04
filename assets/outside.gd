@@ -2,7 +2,7 @@ extends Node2D
 
 
 @export var possible_cats: Array[CatData] = []
-@onready var spawn_points: Array[Marker2D] = [$Spawn1, $Spawn2, $Spawn3]
+@onready var spawns: Node2D = $Spawns
 @onready var timer: Timer = $CatTimer
 @onready var ui: CanvasLayer = $ "../GlobalUI"
 signal change_scene()
@@ -20,7 +20,7 @@ func _spawn_cat() -> void:
 	var new_cat = chosen_cat_data.outside_scene.instantiate()
 	new_cat.cat_data = chosen_cat_data
 	new_cat.cat_found.connect(ui.on_cat_found) #when this spawned cat does cat_found, call _on_cat_found)
-	var spawn_point = spawn_points.pick_random()
+	var spawn_point = spawns.get_children().pick_random()
 	add_child(new_cat)
 	new_cat.global_position = spawn_point.global_position
 	

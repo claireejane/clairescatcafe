@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cat_data.gd" id="2_hm0gs"]
 [ext_resource type="Texture2D" uid="uid://nvoncihraujw" path="res://assets/New Piskel-1.png (9).png" id="3_oysq7"]
 [ext_resource type="Resource" uid="uid://v566jygbayd6" path="res://lily.tres" id="3_pipfy"]
-[ext_resource type="Resource" uid="uid://crogbapoiynm7" path="res://mochi.tres" id="4_15afe"]
+[ext_resource type="Resource" path="res://mochi.tres" id="4_hm0gs"]
 [ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://trixie.tres" id="5_a0svq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3pw3"]
@@ -111,7 +111,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-1158, -868, -34, -908,
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_n3pw3")
-possible_cats = Array[ExtResource("2_hm0gs")]([ExtResource("4_15afe"), ExtResource("3_pipfy"), ExtResource("5_a0svq")])
+possible_cats = Array[ExtResource("2_hm0gs")]([ExtResource("3_pipfy"), ExtResource("5_a0svq"), ExtResource("4_hm0gs")])
 
 [node name="Cafe" type="StaticBody2D" parent="." unique_id=2059951671]
 z_as_relative = false
@@ -150,11 +150,16 @@ wait_time = 3.0
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=138585437]
 navigation_polygon = SubResource("NavigationPolygon_n3pw3")
 
-[node name="Spawn1" type="Marker2D" parent="." unique_id=1782762472]
+[node name="Spawns" type="Node2D" parent="." unique_id=1277975279]
 
-[node name="Spawn2" type="Marker2D" parent="." unique_id=1119124861]
+[node name="Spawn1" type="Marker2D" parent="Spawns" unique_id=1782762472]
+position = Vector2(189, -564)
 
-[node name="Spawn3" type="Marker2D" parent="." unique_id=1723978237]
+[node name="Spawn2" type="Marker2D" parent="Spawns" unique_id=1119124861]
+position = Vector2(-918, -157)
+
+[node name="Spawn3" type="Marker2D" parent="Spawns" unique_id=1723978237]
+position = Vector2(-135, 138)
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="timeout" from="CatTimer" to="." method="_on_cat_timer_timeout"]

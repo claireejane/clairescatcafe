@@ -8,10 +8,17 @@
 [ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://trixie.tres" id="7_i7qel"]
 [ext_resource type="Resource" uid="uid://v566jygbayd6" path="res://lily.tres" id="8_x2kra"]
 [ext_resource type="PackedScene" uid="uid://d3efcr11rkdl8" path="res://assets/player.tscn" id="9_8i2kb"]
-[ext_resource type="Resource" uid="uid://crogbapoiynm7" path="res://mochi.tres" id="9_f65cq"]
+[ext_resource type="Resource" path="res://miffy.tres" id="9_f65cq"]
 
 [node name="Game" type="Node2D" unique_id=1386217610]
+position = Vector2(-159, -88)
 script = ExtResource("1_n5ebr")
+
+[node name="OutsideSpawn" type="Marker2D" parent="." unique_id=687460864]
+position = Vector2(-652, -239)
+
+[node name="InsideSpawn" type="Marker2D" parent="." unique_id=989178379]
+position = Vector2(12, -31)
 
 [node name="Player" parent="." unique_id=2088908881 instance=ExtResource("9_8i2kb")]
 z_as_relative = true
@@ -23,9 +30,3 @@ position = Vector2(-645, -277)
 
 [node name="GlobalUI" parent="." unique_id=109021020 instance=ExtResource("4_lpx4e")]
 all_cats = Array[ExtResource("6_8i2kb")]([ExtResource("7_i7qel"), ExtResource("8_x2kra"), ExtResource("9_f65cq")])
-
-[node name="OutsideSpawn" type="Marker2D" parent="." unique_id=687460864]
-position = Vector2(-641, -275)
-
-[node name="InsideSpawn" type="Marker2D" parent="." unique_id=989178379]
-position = Vector2(-4, -95)

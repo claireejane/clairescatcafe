@@ -36,5 +36,5 @@ func _on_change_scene() -> void:
 			inside_scene.hide()
 			outside_scene.show()
 			white_cat_bar.hide()
-			current_scene = inside_scene
+			current_scene = outside_scene
 			player.global_position = outside_spawn.global_position
