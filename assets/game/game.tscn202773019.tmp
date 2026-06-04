@@ -14,4 +14,5 @@ script = ExtResource("1_n5ebr")
 [node name="Outside" parent="." unique_id=1225810967 instance=ExtResource("2_0aill")]
 
 [node name="GlobalUI" parent="." unique_id=109021020 instance=ExtResource("4_lpx4e")]
+follow_viewport_enabled = true
 all_cats = Array[ExtResource("6_8i2kb")]([ExtResource("7_i7qel"), ExtResource("8_x2kra"), ExtResource("9_f65cq")])

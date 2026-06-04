@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dv1h2nwd3iydf"]
 
 [ext_resource type="Script" uid="uid://ccnk0hoqy8tfh" path="res://cat_slot.gd" id="1_83tk7"]
-[ext_resource type="Texture2D" uid="uid://bacocrblyq102" path="res://assets/bengal.png" id="2_q47eu"]
 
 [node name="CatSlot" type="Control" unique_id=1792313149]
 layout_mode = 3
@@ -14,5 +13,3 @@ script = ExtResource("1_83tk7")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_q47eu")
-expand_mode = 1
