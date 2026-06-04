@@ -140,7 +140,7 @@ scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_gc3b3")
 animation = &"food"
 
-[node name="Loaf" type="Sprite2D" parent="." unique_id=1586428978]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1586428978]
 z_index = 3
 position = Vector2(155, -13)
 scale = Vector2(0.5, 0.5)

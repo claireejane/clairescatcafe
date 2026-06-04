@@ -5,10 +5,13 @@ extends Node2D
 @onready var spawn_points: Array[Marker2D] = [$Spawn1, $Spawn2, $Spawn3]
 @onready var timer: Timer = $CatTimer
 @onready var ui: CanvasLayer = $ "../GlobalUI"
+signal change_scene()
 
 func _ready() -> void:
 	timer.start()
 
+func _process(float) -> void:
+	pass
 		
 func _spawn_cat() -> void: 
 	var chosen_cat_data: CatData = _pick_cat()
@@ -31,5 +34,8 @@ func _pick_cat() -> CatData:
 	return possible_cats.pick_random()	
 		
 func _on_cat_timer_timeout() -> void:
-	_spawn_cat()
+	if visible: _spawn_cat()
 	
+func _on_door_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		change_scene.emit()

@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="CatData" format=3 uid="uid://cwjvypjrqycbt"]
 
 [ext_resource type="Texture2D" uid="uid://h48h83r1qmow" path="res://assets/black.png" id="1_t0ojt"]
+[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cat.tscn" id="1_v7ri6"]
 [ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cat_data.gd" id="2_fpohn"]
 [ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="2_v7ri6"]
 
@@ -11,6 +12,7 @@ breed = "Black Cat"
 description = "While some may think she's unlucky, reports have shown that she has gotten one million slingoes!!"
 loaf = ExtResource("1_t0ojt")
 outside_scene = ExtResource("2_v7ri6")
+inside_scene = ExtResource("1_v7ri6")
 spawn_weight = 5
 cafe_value = 1
 metadata/_custom_type_script = "uid://c0olgupo47gmq"

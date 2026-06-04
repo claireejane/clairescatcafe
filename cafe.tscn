@@ -1,8 +1,7 @@
 [gd_scene format=4 uid="uid://ducjqrj35iyit"]
 
 [ext_resource type="Texture2D" uid="uid://biu0m57x75g3q" path="res://assets/cafe/Cafe/Floors&Walls/floor200%.png" id="1_5chmy"]
-[ext_resource type="PackedScene" uid="uid://d3efcr11rkdl8" path="res://assets/player.tscn" id="1_f6w01"]
-[ext_resource type="Script" path="res://cafe.gd" id="1_n2cq5"]
+[ext_resource type="Script" uid="uid://bg7yrl2hh3rvv" path="res://cafe.gd" id="1_n2cq5"]
 [ext_resource type="PackedScene" uid="uid://bqqu3sko0wkv1" path="res://cat_tree.tscn" id="1_xhqke"]
 [ext_resource type="Texture2D" uid="uid://yjb04txglcnd" path="res://assets/cafe/Cafe/Floors&Walls/wall1.png" id="6_8ejhe"]
 [ext_resource type="Texture2D" uid="uid://drgcpmgsuhd1q" path="res://assets/taskbar/underwhitecat.png" id="7_5f1xq"]
@@ -1259,11 +1258,6 @@ size = Vector2(294.00003, 490.75)
 y_sort_enabled = true
 script = ExtResource("1_n2cq5")
 
-[node name="Player" parent="." unique_id=2088908881 instance=ExtResource("1_f6w01")]
-position = Vector2(110, -25)
-
-[node name="Camera2D2" type="Camera2D" parent="Player" unique_id=870766350]
-
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=5124014]
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AADv//f/AQABAAIAAADy//f/AQABAAIAAAD1//f/AQABAAIAAAD4//f/AQABAAIAAAD7//f/AQABAAIAAAD+//f/AQABAAIAAAABAPf/AQABAAIAAAAEAPf/AQABAAIAAAAHAPf/AQABAAIAAAAKAPf/AQABAAIAAAANAPf/AQABAAIAAAAQAPf/AQABAAIAAAACAPf/AQABAAIAAAAPAPf/AQABAAIAAAAOAPf/AQABAAIAAAAMAPf/AQABAAIAAAALAPf/AQABAAIAAAAJAPf/AQABAAIAAAAIAPf/AQABAAIAAAAGAPf/AQABAAIAAAAFAPf/AQABAAIAAAADAPf/AQABAAIAAAAAAPf/AQABAAIAAAD///f/AQABAAIAAAD9//f/AQABAAIAAAD8//f/AQABAAIAAAD6//f/AQABAAIAAAD5//f/AQABAAIAAAD3//f/AQABAAIAAAD2//f/AQABAAIAAAD0//f/AQABAAIAAADz//f/AQABAAIAAADw//f/AQABAAIAAADx//f/AQABAAIAAAA=")
@@ -1295,7 +1289,6 @@ texture = ExtResource("8_5f1xq")
 [node name="UI" type="CanvasLayer" parent="." unique_id=1406849162]
 
 [node name="WhiteCatBar" type="TextureProgressBar" parent="UI" unique_id=881756574]
-unique_name_in_owner = true
 offset_left = 808.0
 offset_top = 501.0
 offset_right = 1384.0
@@ -1305,4 +1298,27 @@ texture_under = ExtResource("7_5f1xq")
 texture_over = ExtResource("8_n2cq5")
 texture_progress = ExtResource("9_8ejhe")
 
-[connection signal="body_entered" from="Door" to="Player" method="_on_door_body_entered"]
+[node name="Spawns" type="Node2D" parent="." unique_id=167246968]
+position = Vector2(-141, 2)
+
+[node name="Spawn1" type="Marker2D" parent="Spawns" unique_id=898604576]
+position = Vector2(153, -58)
+metadata/has_cat = false
+
+[node name="Spawn2" type="Marker2D" parent="Spawns" unique_id=1442853637]
+position = Vector2(-538, -78)
+metadata/has_cat = false
+
+[node name="Spawn3" type="Marker2D" parent="Spawns" unique_id=579717401]
+position = Vector2(-363, 152)
+metadata/has_cat = false
+
+[node name="Spawn4" type="Marker2D" parent="Spawns" unique_id=1609229996]
+position = Vector2(238, 214)
+metadata/has_cat = false
+
+[node name="Spawn5" type="Marker2D" parent="Spawns" unique_id=896358160]
+position = Vector2(479, 103)
+metadata/has_cat = false
+
+[connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]

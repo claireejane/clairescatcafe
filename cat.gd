@@ -5,13 +5,12 @@ extends CharacterBody2D
 var current_need
 var needs_generated := false
 @onready var animated_sprite = $CatBubble
-@onready var white_happiness_bar = %WhiteCatBar
+@onready var white_happiness_bar = $"../UI/WhiteCatBar"
 @onready var sprite = $Sprite2D
-@export var happiness : float = cat_data.starting_happiness
+@onready var happiness : float = cat_data.starting_happiness
 
 
 func _ready() -> void:
-	
 	animated_sprite.hide()
 	$ClickArea.input_event.connect(_on_click_area_input_event)
 	animated_sprite.animation_finished.connect(_on_cat_bubble_animation_finished)
