@@ -3,6 +3,7 @@ extends Node2D
 
 @export var cat_data: Array[CatData] = []
 @onready var ui: CanvasLayer = $"../GlobalUI"
+@onready var cafe_ui: HFlowContainer = $UIScreen/UI
 @onready var spawns: Node2D = $Spawns
 signal change_scene()
 
@@ -17,9 +18,10 @@ func update_cats() -> void:
 		var new_cat = data.inside_scene.instantiate()
 		new_cat.cat_data = data
 		var new_bar = data.happiness_bar.instantiate()
-		new_bar.texture_over = data.happiness_bar_overlay()
-		new_cat.update_happiness_bar.connect()
+		new_bar.texture_over = data.happiness_bar_overlay
+		new_cat.update_happiness_bar.connect(new_bar.update_happiness_tint)
 		add_child(new_cat)
+		cafe_ui.add_child(new_bar)
 		if new_cat.cat_data.inside_spot == "none":
 			find_a_spot(new_cat)
 

@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="CatData" format=3 uid="uid://crogbapoiynm7"]
 
+[ext_resource type="PackedScene" uid="uid://clsd77cl30mhi" path="res://white_cat_bar.tscn" id="1_q8c0w"]
 [ext_resource type="Texture2D" uid="uid://dhfhdmn6o52an" path="res://assets/New Piskel-1.png (5).png" id="1_u0ye1"]
 [ext_resource type="Texture2D" uid="uid://bbx4a15ke8kc2" path="res://assets/ragdoll.png" id="2_7us6m"]
 [ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="2_q8c0w"]
@@ -15,6 +16,7 @@ loaf = ExtResource("2_7us6m")
 happiness_bar_overlay = ExtResource("1_u0ye1")
 outside_scene = ExtResource("2_u0ye1")
 inside_scene = ExtResource("2_q8c0w")
+happiness_bar = ExtResource("1_q8c0w")
 spawn_weight = 10
 cafe_value = 7
 metadata/_custom_type_script = "uid://c0olgupo47gmq"

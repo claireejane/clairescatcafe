@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://bg7yrl2hh3rvv" path="res://cafe.gd" id="1_n2cq5"]
 [ext_resource type="PackedScene" uid="uid://bqqu3sko0wkv1" path="res://cat_tree.tscn" id="1_xhqke"]
 [ext_resource type="Texture2D" uid="uid://yjb04txglcnd" path="res://assets/cafe/Cafe/Floors&Walls/wall1.png" id="6_8ejhe"]
-[ext_resource type="PackedScene" uid="uid://clsd77cl30mhi" path="res://white_cat_bar.tscn" id="7_5chmy"]
 [ext_resource type="Texture2D" uid="uid://blu45ltli2fus" path="res://assets/sample img-1.png.png" id="8_5f1xq"]
 [ext_resource type="Texture2D" uid="uid://b3ulv2neprow3" path="res://assets/cafe/Cafe/Floors&Walls/wall3.png" id="8_23r33"]
 
@@ -1284,10 +1283,11 @@ position = Vector2(12, -258)
 scale = Vector2(0.703125, 0.6944444)
 texture = ExtResource("8_5f1xq")
 
-[node name="UI" type="HFlowContainer" parent="." unique_id=316612769]
+[node name="UIScreen" type="CanvasLayer" parent="." unique_id=1084339144]
 
-[node name="WhiteCatBar" parent="UI" unique_id=375082903 instance=ExtResource("7_5chmy")]
-layout_mode = 2
+[node name="UI" type="HFlowContainer" parent="UIScreen" unique_id=316612769]
+offset_right = 576.0
+offset_bottom = 288.0
 
 [node name="Spawns" type="Node2D" parent="." unique_id=167246968]
 position = Vector2(-141, 2)

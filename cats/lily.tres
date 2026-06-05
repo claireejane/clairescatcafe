@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://clsd77cl30mhi" path="res://white_cat_bar.tscn" id="1_7rmmq"]
 [ext_resource type="Texture2D" uid="uid://cko7ex7u77clx" path="res://assets/russian blue.png" id="1_18184"]
-[ext_resource type="Texture2D" uid="uid://c06gyq4w0r0d5" path="res://assets/lily_top_bar.png" id="2_1oib6"]
+[ext_resource type="Texture2D" uid="uid://b0ix5gh15defr" path="res://assets/New Piskel-1.png (4).png" id="2_4fq2v"]
 [ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="2_u0ye1"]
 [ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="3_biddu"]
 [ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cats/cat_data.gd" id="6_swf6s"]
@@ -13,7 +13,7 @@ name = "Lily"
 breed = "Russian Blue"
 description = "A sweet, occasionally moody girl who loves to rub her face against yours."
 loaf = ExtResource("1_18184")
-happiness_bar_overlay = ExtResource("2_1oib6")
+happiness_bar_overlay = ExtResource("2_4fq2v")
 outside_scene = ExtResource("2_u0ye1")
 inside_scene = ExtResource("3_biddu")
 happiness_bar = ExtResource("1_7rmmq")

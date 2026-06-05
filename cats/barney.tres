@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CatData" format=3 uid="uid://my5ha22pmglx"]
 
-[ext_resource type="Texture2D" uid="uid://bfn8c1o8lrfsf" path="res://assets/New Piskel-1.png (12).png" id="1_3swbc"]
 [ext_resource type="PackedScene" uid="uid://clsd77cl30mhi" path="res://white_cat_bar.tscn" id="1_py3fr"]
+[ext_resource type="Texture2D" uid="uid://b0ix5gh15defr" path="res://assets/New Piskel-1.png (4).png" id="2_k5qve"]
 [ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="2_py3fr"]
 [ext_resource type="Texture2D" uid="uid://d1btpn17poj4s" path="res://assets/tuxedo.png" id="3_s4286"]
 [ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="4_n7ejm"]
@@ -13,7 +13,7 @@ name = "Barney Stinson"
 breed = "Tuxedo"
 description = "Suit up!"
 loaf = ExtResource("3_s4286")
-happiness_bar_overlay = ExtResource("1_3swbc")
+happiness_bar_overlay = ExtResource("2_k5qve")
 outside_scene = ExtResource("4_n7ejm")
 inside_scene = ExtResource("2_py3fr")
 happiness_bar = ExtResource("1_py3fr")

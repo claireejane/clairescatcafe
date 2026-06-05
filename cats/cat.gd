@@ -8,8 +8,8 @@ var needs_generated := false
 @onready var white_happiness_bar = $"../UI/WhiteCatBar"
 @onready var sprite = $Sprite2D
 @onready var happiness : float = cat_data.starting_happiness
-@export var color_transition: Gradient 
 signal update_happiness_bar
+
 
 func _ready() -> void:
 	animated_sprite.hide()
