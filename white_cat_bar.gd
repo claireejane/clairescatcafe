@@ -9,3 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+func update_happiness_tint(happiness:float) -> void:
+	self.value = happiness
+	var color := color_transition.sample(happiness/100) 
+	white_happiness_bar.set_tint_progress(color)

@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://6rujp56e0w00" path="res://assets/cat-1.png (3).png" id="2_kvwha"]
 [ext_resource type="FontFile" uid="uid://cell1kiuffrf7" path="res://assets/ithaca-font/Ithaca-LVB75.ttf" id="3_w5o01"]
 [ext_resource type="PackedScene" uid="uid://dv1h2nwd3iydf" path="res://cat_slot.tscn" id="4_kvwha"]
-[ext_resource type="Resource" uid="uid://v566jygbayd6" path="res://lily.tres" id="5_20t6b"]
-[ext_resource type="Resource" path="res://mochi.tres" id="6_20t6b"]
-[ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://trixie.tres" id="7_564j2"]
+[ext_resource type="Resource" uid="uid://v566jygbayd6" path="res://cats/lily.tres" id="5_20t6b"]
+[ext_resource type="Resource" uid="uid://my5ha22pmglx" path="res://cats/barney.tres" id="6_20t6b"]
+[ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://cats/trixie.tres" id="7_564j2"]
 
 [node name="GlobalUI" type="CanvasLayer" unique_id=109021020]
 script = ExtResource("1_i8656")

@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://yciwojrrnadn" path="res://assets/sample img-1.png (2).png" id="1_oysq7"]
 [ext_resource type="Texture2D" uid="uid://bnlxwka2fr1e6" path="res://assets/cafe/Cafe/Untitled_Artwork-3.png" id="1_vt2ta"]
 [ext_resource type="Texture2D" uid="uid://catx7aahqwbrr" path="res://assets/New Piskel-1.png (7).png" id="2_frjmp"]
-[ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cat_data.gd" id="2_hm0gs"]
+[ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cats/cat_data.gd" id="2_hm0gs"]
 [ext_resource type="Texture2D" uid="uid://nvoncihraujw" path="res://assets/New Piskel-1.png (9).png" id="3_oysq7"]
-[ext_resource type="Resource" uid="uid://v566jygbayd6" path="res://lily.tres" id="3_pipfy"]
-[ext_resource type="Resource" uid="uid://crogbapoiynm7" path="res://mochi.tres" id="4_hm0gs"]
-[ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://trixie.tres" id="5_a0svq"]
+[ext_resource type="Resource" uid="uid://v566jygbayd6" path="res://cats/lily.tres" id="3_pipfy"]
+[ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://cats/trixie.tres" id="5_a0svq"]
+[ext_resource type="Resource" uid="uid://my5ha22pmglx" path="res://cats/barney.tres" id="5_hm0gs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3pw3"]
 texture = ExtResource("1_vt2ta")
@@ -111,7 +111,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-1158, -868, -34, -908,
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_n3pw3")
-possible_cats = Array[ExtResource("2_hm0gs")]([ExtResource("3_pipfy"), ExtResource("5_a0svq"), ExtResource("4_hm0gs")])
+possible_cats = Array[ExtResource("2_hm0gs")]([ExtResource("3_pipfy"), ExtResource("5_a0svq"), ExtResource("5_hm0gs")])
 
 [node name="Cafe" type="StaticBody2D" parent="." unique_id=2059951671]
 z_as_relative = false

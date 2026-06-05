@@ -9,6 +9,7 @@ var needs_generated := false
 @onready var sprite = $Sprite2D
 @onready var happiness : float = cat_data.starting_happiness
 @export var color_transition: Gradient 
+signal update_happiness_bar
 
 func _ready() -> void:
 	animated_sprite.hide()
@@ -28,7 +29,7 @@ func _on_click_area_input_event(viewport: Viewport, event: InputEvent, shape_idx
 func _process(delta: float) -> void:
 	var difficulty = (100 - cat_data.spawn_weight)*0.1
 	happiness -= delta * difficulty
-	update_happiness_bar()
+	update_happiness_bar.emit(happiness)
 	if happiness < 75 and needs_generated == false:
 		animated_sprite.show()
 		animated_sprite.play("generate")
@@ -39,7 +40,3 @@ func _on_cat_bubble_animation_finished() -> void:
 	if animated_sprite.animation == "generate":
 		animated_sprite.play(current_need)	
 		
-func update_happiness_bar() -> void:
-	white_happiness_bar.value = happiness
-	var color := color_transition.sample(happiness/100) 
-	white_happiness_bar.set_tint_progress(color)

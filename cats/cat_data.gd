@@ -9,6 +9,7 @@ extends Resource
 @export var happiness_bar_overlay: Texture2D
 @export var outside_scene: PackedScene
 @export var inside_scene: PackedScene
+@export var happiness_bar: PackedScene
 @export var inside_spot: String = "none"
 
 @export var spawn_weight: int # How rare the cat's spawn is

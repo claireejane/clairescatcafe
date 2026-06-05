@@ -16,6 +16,9 @@ func update_cats() -> void:
 	for data in ui.cat_inventory:
 		var new_cat = data.inside_scene.instantiate()
 		new_cat.cat_data = data
+		var new_bar = data.happiness_bar.instantiate()
+		new_bar.texture_over = data.happiness_bar_overlay()
+		new_cat.update_happiness_bar.connect()
 		add_child(new_cat)
 		if new_cat.cat_data.inside_spot == "none":
 			find_a_spot(new_cat)

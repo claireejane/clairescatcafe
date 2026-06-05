@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://dhfhdmn6o52an" path="res://assets/New Piskel-1.png (5).png" id="1_u0ye1"]
 [ext_resource type="Texture2D" uid="uid://bbx4a15ke8kc2" path="res://assets/ragdoll.png" id="2_7us6m"]
-[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cat.tscn" id="2_q8c0w"]
+[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="2_q8c0w"]
 [ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="2_u0ye1"]
-[ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cat_data.gd" id="3_7us6m"]
+[ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cats/cat_data.gd" id="3_7us6m"]
 
 [resource]
 script = ExtResource("3_7us6m")

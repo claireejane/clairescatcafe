@@ -1,18 +1,22 @@
 [gd_resource type="Resource" script_class="CatData" format=3 uid="uid://v566jygbayd6"]
 
+[ext_resource type="PackedScene" uid="uid://clsd77cl30mhi" path="res://white_cat_bar.tscn" id="1_7rmmq"]
 [ext_resource type="Texture2D" uid="uid://cko7ex7u77clx" path="res://assets/russian blue.png" id="1_18184"]
-[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cat.tscn" id="1_rnc4m"]
+[ext_resource type="Texture2D" uid="uid://c06gyq4w0r0d5" path="res://assets/lily_top_bar.png" id="2_1oib6"]
 [ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="2_u0ye1"]
-[ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cat_data.gd" id="3_7us6m"]
+[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="3_biddu"]
+[ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cats/cat_data.gd" id="6_swf6s"]
 
 [resource]
-script = ExtResource("3_7us6m")
+script = ExtResource("6_swf6s")
 name = "Lily"
 breed = "Russian Blue"
 description = "A sweet, occasionally moody girl who loves to rub her face against yours."
 loaf = ExtResource("1_18184")
+happiness_bar_overlay = ExtResource("2_1oib6")
 outside_scene = ExtResource("2_u0ye1")
-inside_scene = ExtResource("1_rnc4m")
+inside_scene = ExtResource("3_biddu")
+happiness_bar = ExtResource("1_7rmmq")
 spawn_weight = 20
 cafe_value = 9
 metadata/_custom_type_script = "uid://c0olgupo47gmq"

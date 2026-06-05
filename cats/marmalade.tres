@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CatData" format=3 uid="uid://ckju18pfip1b2"]
+
+[ext_resource type="PackedScene" uid="uid://clsd77cl30mhi" path="res://white_cat_bar.tscn" id="1_agjyt"]
+[ext_resource type="Texture2D" uid="uid://cfrnq8cxbmjui" path="res://assets/New Piskel-1.png (13).png" id="2_hc6ht"]
+[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="3_71uop"]
+[ext_resource type="Texture2D" uid="uid://60c18kkxqd4k" path="res://assets/marmalade.png" id="4_l6nvq"]
+[ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="5_wn5st"]
+[ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cats/cat_data.gd" id="6_cl5px"]
+
+[resource]
+script = ExtResource("6_cl5px")
+name = "Marmalade"
+breed = "Orange Cat"
+description = "Absolute balls-grabber and meat puller "
+loaf = ExtResource("4_l6nvq")
+happiness_bar_overlay = ExtResource("2_hc6ht")
+outside_scene = ExtResource("5_wn5st")
+inside_scene = ExtResource("3_71uop")
+happiness_bar = ExtResource("1_agjyt")
+spawn_weight = 10
+cafe_value = 7
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
