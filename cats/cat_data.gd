@@ -11,6 +11,7 @@ extends Resource
 @export var inside_scene: PackedScene
 @export var happiness_bar: PackedScene
 @export var inside_spot: String = "none"
+@export var walk: SpriteFrames
 
 @export var spawn_weight: int # How rare the cat's spawn is
 @export var cafe_value: int

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CatData" format=3 uid="uid://r1sdgpk0csis"]
+
+[ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cats/cat_data.gd" id="1_5yg3g"]
+[ext_resource type="PackedScene" uid="uid://clsd77cl30mhi" path="res://white_cat_bar.tscn" id="1_8t7x0"]
+[ext_resource type="Texture2D" uid="uid://nuv0oec4l1y0" path="res://assets/asli_top_bar.png" id="2_xdqnq"]
+[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="3_7g8hn"]
+[ext_resource type="Texture2D" uid="uid://btejjakcufsbt" path="res://assets/asli_loaf.png" id="4_7a1n3"]
+[ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="5_o8o4n"]
+[ext_resource type="SpriteFrames" uid="uid://0745lm3kq51s" path="res://cats/asliwalk.tres" id="7_xdqnq"]
+
+[resource]
+script = ExtResource("1_5yg3g")
+name = "Asli"
+breed = "??"
+description = "..."
+loaf = ExtResource("4_7a1n3")
+happiness_bar_overlay = ExtResource("2_xdqnq")
+outside_scene = ExtResource("5_o8o4n")
+inside_scene = ExtResource("3_7g8hn")
+happiness_bar = ExtResource("1_8t7x0")
+walk = ExtResource("7_xdqnq")
+spawn_weight = 11
+cafe_value = 7
+metadata/_custom_type_script = "uid://c0olgupo47gmq"

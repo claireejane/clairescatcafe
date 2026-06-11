@@ -4,10 +4,10 @@ extends CharacterBody2D
 
 @onready var navigation_agent = $NavigationAgent2D
 @onready var next_position
-@onready var sprite: Sprite2D = $Loaf
+@onready var walk: AnimatedSprite2D = $Walk
 signal cat_found(cat_data: CatData)
 @onready var player: CharacterBody2D = $"../../Player"
-
+@onready var walkcycle 
 const SPEED = 300.0
 var player_near : bool = false
 
@@ -16,16 +16,23 @@ func _ready() -> void:
 	call_deferred("pick_new_target")
 	next_position = navigation_agent.get_next_path_position()
 	if cat_data:
-		sprite.set_texture(cat_data.loaf)
+		walk.sprite_frames = cat_data.walk
 	
 func _physics_process(delta: float) -> void:
 	var direction = global_position.direction_to(next_position)
+	if abs(direction.x) > abs(direction.y):
+		walkcycle = "right" if direction.x > 0 else "left"
+	elif abs(direction.y) > abs(direction.x):
+		walkcycle = "down" if direction.y > 0 else "up"
+			
 	if navigation_agent.is_navigation_finished():
 		pick_new_target()
 		return
 	else:
 		velocity = direction * SPEED
 		move_and_slide()
+		walk.play(walkcycle)
+		
 	if Input.is_action_just_pressed("get") and player_near == true:
 		cat_found.emit(cat_data)
 		print("should have found")

@@ -5,8 +5,68 @@
 [ext_resource type="FontFile" uid="uid://cell1kiuffrf7" path="res://assets/ithaca-font/Ithaca-LVB75.ttf" id="3_w5o01"]
 [ext_resource type="PackedScene" uid="uid://dv1h2nwd3iydf" path="res://cat_slot.tscn" id="4_kvwha"]
 [ext_resource type="Resource" uid="uid://v566jygbayd6" path="res://cats/lily.tres" id="5_20t6b"]
+[ext_resource type="Resource" uid="uid://7xeftfleiu3" path="res://cats/vicky.tres" id="5_564j2"]
 [ext_resource type="Resource" uid="uid://my5ha22pmglx" path="res://cats/barney.tres" id="6_20t6b"]
 [ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://cats/trixie.tres" id="7_564j2"]
+[ext_resource type="Resource" uid="uid://r1sdgpk0csis" path="res://cats/asli.tres" id="8_0t2by"]
+[ext_resource type="Resource" uid="uid://ckju18pfip1b2" path="res://cats/marmalade.tres" id="10_0t2by"]
+[ext_resource type="PackedScene" uid="uid://clsd77cl30mhi" path="res://white_cat_bar.tscn" id="11_sphb4"]
+[ext_resource type="Texture2D" uid="uid://cnf7r4fjdsnil" path="res://assets/lily_top_bar (2).png" id="12_ipa1h"]
+[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="13_opcbm"]
+[ext_resource type="Texture2D" uid="uid://tdjq5f1ms42u" path="res://assets/cat.png" id="14_cvehq"]
+[ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="15_a1hqd"]
+[ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cats/cat_data.gd" id="16_27h5q"]
+[ext_resource type="SpriteFrames" uid="uid://bno6q1m6sefm0" path="res://cats/miffywalk.tres" id="17_a1hqd"]
+[ext_resource type="Texture2D" uid="uid://b88p2w15jn6ri" path="res://assets/calico.png" id="17_ipa1h"]
+[ext_resource type="Texture2D" uid="uid://bs0yiqcxn6uk7" path="res://assets/nestle_top_bar (2).png" id="18_cvehq"]
+[ext_resource type="Texture2D" uid="uid://vb2voo4umeg6" path="res://assets/havana brown.png" id="19_a1hqd"]
+[ext_resource type="SpriteFrames" uid="uid://dmhkhvngmqfrd" path="res://cats/calicowalk.tres" id="19_gmwai"]
+[ext_resource type="SpriteFrames" uid="uid://bo353moop838s" path="res://cats/nestlewalk.tres" id="22_ii6ah"]
+
+[sub_resource type="Resource" id="Resource_gmwai"]
+script = ExtResource("16_27h5q")
+name = "Miffy"
+breed = "White"
+description = "white"
+loaf = ExtResource("14_cvehq")
+happiness_bar_overlay = ExtResource("12_ipa1h")
+outside_scene = ExtResource("15_a1hqd")
+inside_scene = ExtResource("13_opcbm")
+happiness_bar = ExtResource("11_sphb4")
+walk = ExtResource("17_a1hqd")
+spawn_weight = 7
+cafe_value = 11
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
+
+[sub_resource type="Resource" id="Resource_opcbm"]
+script = ExtResource("16_27h5q")
+name = "Calico"
+breed = "Calico"
+description = "Calico lol"
+loaf = ExtResource("17_ipa1h")
+happiness_bar_overlay = ExtResource("12_ipa1h")
+outside_scene = ExtResource("15_a1hqd")
+inside_scene = ExtResource("13_opcbm")
+happiness_bar = ExtResource("11_sphb4")
+walk = ExtResource("19_gmwai")
+spawn_weight = 6
+cafe_value = 12
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
+
+[sub_resource type="Resource" id="Resource_27h5q"]
+script = ExtResource("16_27h5q")
+name = "Nestle"
+breed = "Havana Brown "
+description = "eeee"
+loaf = ExtResource("19_a1hqd")
+happiness_bar_overlay = ExtResource("18_cvehq")
+outside_scene = ExtResource("15_a1hqd")
+inside_scene = ExtResource("13_opcbm")
+happiness_bar = ExtResource("11_sphb4")
+walk = ExtResource("22_ii6ah")
+spawn_weight = 5
+cafe_value = 15
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
 
 [node name="GlobalUI" type="CanvasLayer" unique_id=109021020]
 script = ExtResource("1_i8656")
@@ -53,30 +113,97 @@ offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
-[node name="CatSlotLily" parent="CatMenuPanel/CatSlotHolder" unique_id=1792313149 instance=ExtResource("4_kvwha")]
-layout_mode = 0
+[node name="CatSlotVicky" parent="CatMenuPanel/CatSlotHolder" unique_id=1792313149 instance=ExtResource("4_kvwha")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.025000382
+anchor_top = -0.025
+anchor_right = -0.025
+anchor_bottom = -0.025
 offset_left = 242.0
 offset_top = 221.00002
 offset_right = 282.0
 offset_bottom = 261.0
 scale = Vector2(3.0868814, 2.250694)
-cat_data = ExtResource("5_20t6b")
+cat_data = ExtResource("5_564j2")
 metadata/_edit_use_anchors_ = true
 
-[node name="CatSlotMochi" parent="CatMenuPanel/CatSlotHolder" unique_id=909379089 instance=ExtResource("4_kvwha")]
+[node name="CatSlotBarney" parent="CatMenuPanel/CatSlotHolder" unique_id=909379089 instance=ExtResource("4_kvwha")]
 layout_mode = 0
 offset_left = 376.0
 offset_top = 222.00002
 offset_right = 416.0
 offset_bottom = 262.0
 scale = Vector2(3.0868814, 2.250694)
+localize_numeral_system = false
 cat_data = ExtResource("6_20t6b")
 
 [node name="CatSlotTrixie" parent="CatMenuPanel/CatSlotHolder" unique_id=402692524 instance=ExtResource("4_kvwha")]
 layout_mode = 0
-offset_left = 508.00003
-offset_top = 222.00002
-offset_right = 548.0
-offset_bottom = 262.0
+offset_left = 511.00003
+offset_top = 219.00002
+offset_right = 551.0
+offset_bottom = 259.0
 scale = Vector2(3.0868814, 2.250694)
+localize_numeral_system = false
 cat_data = ExtResource("7_564j2")
+
+[node name="CatSlotAsli" parent="CatMenuPanel/CatSlotHolder" unique_id=360026598 instance=ExtResource("4_kvwha")]
+layout_mode = 0
+offset_left = 645.0
+offset_top = 217.00002
+offset_right = 685.0
+offset_bottom = 257.0
+scale = Vector2(3.0868814, 2.250694)
+localize_numeral_system = false
+cat_data = ExtResource("8_0t2by")
+
+[node name="CatSlotLily" parent="CatMenuPanel/CatSlotHolder" unique_id=1709588817 instance=ExtResource("4_kvwha")]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 220.0
+offset_right = 820.0
+offset_bottom = 260.0
+scale = Vector2(3.0868814, 2.250694)
+localize_numeral_system = false
+cat_data = ExtResource("5_20t6b")
+
+[node name="CatSlotMarmalade" parent="CatMenuPanel/CatSlotHolder" unique_id=1447659170 instance=ExtResource("4_kvwha")]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 317.0
+offset_right = 281.0
+offset_bottom = 357.0
+scale = Vector2(3.0868814, 2.250694)
+localize_numeral_system = false
+cat_data = ExtResource("10_0t2by")
+
+[node name="CatSlotMiffy" parent="CatMenuPanel/CatSlotHolder" unique_id=1063621873 instance=ExtResource("4_kvwha")]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 318.0
+offset_right = 416.0
+offset_bottom = 358.0
+scale = Vector2(3.0868814, 2.250694)
+localize_numeral_system = false
+cat_data = SubResource("Resource_gmwai")
+
+[node name="CatSlotCalico" parent="CatMenuPanel/CatSlotHolder" unique_id=809512487 instance=ExtResource("4_kvwha")]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 317.0
+offset_right = 547.0
+offset_bottom = 357.0
+scale = Vector2(3.0868814, 2.250694)
+localize_numeral_system = false
+cat_data = SubResource("Resource_opcbm")
+
+[node name="CatSlotNestle" parent="CatMenuPanel/CatSlotHolder" unique_id=1406388613 instance=ExtResource("4_kvwha")]
+layout_mode = 0
+offset_left = 643.0
+offset_top = 316.0
+offset_right = 683.0
+offset_bottom = 356.0
+scale = Vector2(3.0868814, 2.250694)
+localize_numeral_system = false
+cat_data = SubResource("Resource_27h5q")

@@ -4,7 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://on6ocmprdqeb" path="res://assets/outside.tscn" id="2_0aill"]
 [ext_resource type="PackedScene" uid="uid://ducjqrj35iyit" path="res://cafe.tscn" id="2_n5ebr"]
 [ext_resource type="PackedScene" uid="uid://c43htjkg3afel" path="res://assets/global_ui.tscn" id="4_lpx4e"]
+[ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cats/cat_data.gd" id="5_i24q8"]
+[ext_resource type="Resource" uid="uid://v566jygbayd6" path="res://cats/lily.tres" id="6_5fe3y"]
+[ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://cats/trixie.tres" id="7_mdhdh"]
+[ext_resource type="Resource" uid="uid://my5ha22pmglx" path="res://cats/barney.tres" id="8_6sdns"]
 [ext_resource type="PackedScene" uid="uid://d3efcr11rkdl8" path="res://assets/player.tscn" id="9_8i2kb"]
+[ext_resource type="Resource" uid="uid://ckju18pfip1b2" path="res://cats/marmalade.tres" id="9_q06ww"]
+[ext_resource type="Resource" uid="uid://7xeftfleiu3" path="res://cats/vicky.tres" id="10_d8h1w"]
+[ext_resource type="Resource" uid="uid://r1sdgpk0csis" path="res://cats/asli.tres" id="11_kb02g"]
+[ext_resource type="Resource" uid="uid://bjpyhjgxn6rbw" path="res://cats/nestle.tres" id="12_fqxx5"]
 
 [node name="Game" type="Node2D" unique_id=1386217610]
 script = ExtResource("1_n5ebr")
@@ -22,5 +30,6 @@ z_as_relative = true
 position = Vector2(-645, -277)
 
 [node name="Outside" parent="." unique_id=1225810967 instance=ExtResource("2_0aill")]
+possible_cats = Array[ExtResource("5_i24q8")]([ExtResource("6_5fe3y"), ExtResource("7_mdhdh"), ExtResource("8_6sdns"), ExtResource("9_q06ww"), ExtResource("10_d8h1w"), ExtResource("11_kb02g"), ExtResource("12_fqxx5")])
 
 [node name="GlobalUI" parent="." unique_id=109021020 instance=ExtResource("4_lpx4e")]

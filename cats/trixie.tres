@@ -2,10 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://h48h83r1qmow" path="res://assets/black.png" id="1_t0ojt"]
 [ext_resource type="PackedScene" uid="uid://clsd77cl30mhi" path="res://white_cat_bar.tscn" id="1_ub0wr"]
-[ext_resource type="Texture2D" uid="uid://b0ix5gh15defr" path="res://assets/New Piskel-1.png (4).png" id="2_2i3p7"]
+[ext_resource type="Texture2D" uid="uid://c6bpodnqusiu4" path="res://assets/trixie_top_bar (2).png" id="2_2i3p7"]
 [ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="2_v7ri6"]
 [ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="3_iolt7"]
 [ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cats/cat_data.gd" id="6_dpb84"]
+[ext_resource type="SpriteFrames" uid="uid://bj7g1w4kovbig" path="res://cats/trixiewalk.tres" id="7_pofsb"]
 
 [resource]
 script = ExtResource("6_dpb84")
@@ -17,6 +18,7 @@ happiness_bar_overlay = ExtResource("2_2i3p7")
 outside_scene = ExtResource("2_v7ri6")
 inside_scene = ExtResource("3_iolt7")
 happiness_bar = ExtResource("1_ub0wr")
-spawn_weight = 5
-cafe_value = 1
+walk = ExtResource("7_pofsb")
+spawn_weight = 14
+cafe_value = 7
 metadata/_custom_type_script = "uid://c0olgupo47gmq"
