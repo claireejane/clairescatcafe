@@ -10,10 +10,10 @@ offsets = PackedFloat32Array(0, 0.5652174, 1)
 colors = PackedColorArray(1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1)
 
 [node name="WhiteCatBar" type="TextureProgressBar" unique_id=375082903]
-offset_left = 808.0
-offset_top = 501.0
-offset_right = 1384.0
-offset_bottom = 789.0
+offset_left = 812.00006
+offset_top = 519.0
+offset_right = 1388.0
+offset_bottom = 807.0
 scale = Vector2(0.55524105, 0.5553156)
 texture_under = ExtResource("1_c7qkm")
 texture_over = ExtResource("2_gwo0e")
