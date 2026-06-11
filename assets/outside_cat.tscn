@@ -31,5 +31,15 @@ one_way_collision = true
 scale = Vector2(24.680002, 26.839996)
 shape = SubResource("CircleShape2D_2slrp")
 
+[node name="IdleCountdown" type="Timer" parent="." unique_id=656189202]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="IdleDuration" type="Timer" parent="." unique_id=1152226822]
+one_shot = true
+
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]
+[connection signal="timeout" from="IdleCountdown" to="." method="_on_idle_countdown_timeout"]
+[connection signal="timeout" from="IdleDuration" to="." method="_on_idle_duration_timeout"]

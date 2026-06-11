@@ -10,6 +10,8 @@ signal cat_found(cat_data: CatData)
 @onready var walkcycle 
 const SPEED = 300.0
 var player_near : bool = false
+@onready var idle_countdown: Timer = $IdleCountdown
+@onready var idle_duration: Timer = $IdleDuration
 
 
 func _ready() -> void:
@@ -19,25 +21,12 @@ func _ready() -> void:
 		walk.sprite_frames = cat_data.walk
 	
 func _physics_process(delta: float) -> void:
-	var direction = global_position.direction_to(next_position)
-	if abs(direction.x) > abs(direction.y):
-		walkcycle = "right" if direction.x > 0 else "left"
-	elif abs(direction.y) > abs(direction.x):
-		walkcycle = "down" if direction.y > 0 else "up"
-			
-	if navigation_agent.is_navigation_finished():
-		pick_new_target()
-		return
-	else:
-		velocity = direction * SPEED
-		move_and_slide()
-		walk.play(walkcycle)
-		
+	if idle_duration.is_stopped():
+		_move_cat()
 	if Input.is_action_just_pressed("get") and player_near == true:
 		cat_found.emit(cat_data)
 		print("should have found")
 		hide()
-	next_position = navigation_agent.get_next_path_position()
 
 func _on_interaction_area_body_exited(body: Node2D) -> void:
 	if body == player and player_near == true:
@@ -54,3 +43,34 @@ func pick_new_target() -> void:
 	var random_y = randf_range(-200, 200)
 	var target_position = global_position + Vector2(random_x, random_y)
 	navigation_agent.target_position = target_position
+
+
+func _on_idle_countdown_timeout() -> void:
+	var duration = randi_range(2, 7)
+	idle_duration.wait_time = duration
+	walkcycle = "idle"
+	idle_duration.start()
+	walk.play(walkcycle)
+
+
+func _on_idle_duration_timeout() -> void:
+	var duration = randi_range(2, 15)
+	idle_countdown.wait_time = duration
+	idle_countdown.start()
+
+func _move_cat() -> void:
+	var direction = global_position.direction_to(next_position)
+	if abs(direction.x) > abs(direction.y):
+		walkcycle = "right" if direction.x > 0 else "left"
+	elif abs(direction.y) > abs(direction.x):
+		walkcycle = "down" if direction.y > 0 else "up"
+			
+	if navigation_agent.is_navigation_finished():
+		pick_new_target()
+		return
+	else:
+		velocity = direction * SPEED
+		move_and_slide()
+		walk.play(walkcycle)
+	next_position = navigation_agent.get_next_path_position()
+		

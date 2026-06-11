@@ -1285,7 +1285,7 @@ texture = ExtResource("8_5f1xq")
 
 [node name="UIScreen" type="CanvasLayer" parent="." unique_id=1084339144]
 
-[node name="UI" type="HFlowContainer" parent="UIScreen" unique_id=316612769]
+[node name="UI" type="VBoxContainer" parent="UIScreen" unique_id=245258748]
 scale = Vector2(1.047, 1)
 size_flags_horizontal = 3
 size_flags_vertical = 3

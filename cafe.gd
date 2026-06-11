@@ -3,7 +3,7 @@ extends Node2D
 
 @export var cat_data: Array[CatData] = []
 @onready var ui: CanvasLayer = $"../GlobalUI"
-@onready var cafe_ui: HFlowContainer = $UIScreen/UI
+@onready var cafe_ui: VBoxContainer = $UIScreen/UI
 @onready var spawns: Node2D = $Spawns
 signal change_scene()
 

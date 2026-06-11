@@ -10,6 +10,7 @@ offsets = PackedFloat32Array(0, 0.5652174, 1)
 colors = PackedColorArray(1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1)
 
 [node name="WhiteCatBar" type="TextureProgressBar" unique_id=375082903]
+custom_minimum_size = Vector2(192, 90)
 offset_left = 888.0
 offset_top = 511.0
 offset_right = 1464.0
