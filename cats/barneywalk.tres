@@ -1,6 +1,7 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://cbwuplhnh5xu5"]
 
 [ext_resource type="Texture2D" uid="uid://w3huoej2va01" path="res://assets/barney_walk.png" id="1_i0h3h"]
+[ext_resource type="Texture2D" uid="uid://blypgrhunaowj" path="res://assets/tuxedo-1.png.png" id="2_erv7t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i0h3h"]
 atlas = ExtResource("1_i0h3h")
@@ -17,6 +18,10 @@ region = Rect2(184, 0, 92, 95)
 [sub_resource type="AtlasTexture" id="AtlasTexture_bkd6w"]
 atlas = ExtResource("1_i0h3h")
 region = Rect2(276, 0, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sha3"]
+atlas = ExtResource("2_erv7t")
+region = Rect2(0, 0, 56, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m66ar"]
 atlas = ExtResource("1_i0h3h")
@@ -83,6 +88,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7sha3")
+}],
+"loop": true,
+"name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{

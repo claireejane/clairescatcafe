@@ -1,6 +1,7 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://0745lm3kq51s"]
 
 [ext_resource type="Texture2D" uid="uid://cssb04eqadceq" path="res://assets/asli_walk.png" id="1_0jtp7"]
+[ext_resource type="Texture2D" uid="uid://b4idpif6je4vn" path="res://assets/asli_loaf-1.png.png" id="2_iqs5e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0jtp7"]
 atlas = ExtResource("1_0jtp7")
@@ -17,6 +18,10 @@ region = Rect2(184, 0, 92, 95)
 [sub_resource type="AtlasTexture" id="AtlasTexture_k7nrf"]
 atlas = ExtResource("1_0jtp7")
 region = Rect2(276, 0, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbe17"]
+atlas = ExtResource("2_iqs5e")
+region = Rect2(0, 0, 56, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g1ema"]
 atlas = ExtResource("1_0jtp7")
@@ -83,6 +88,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbe17")
+}],
+"loop": true,
+"name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{

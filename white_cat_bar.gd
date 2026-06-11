@@ -5,6 +5,10 @@ extends TextureProgressBar
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	FillMode.FILL_LEFT_TO_RIGHT
+	print(Vector2(position.x, position.y))
+	print(visible)
+	print(size)
+	set_size(size*10)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

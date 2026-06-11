@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://clsd77cl30mhi"]
 
-[ext_resource type="Texture2D" uid="uid://c4gnxvya1r8pt" path="res://assets/New Piskel-2.png.png" id="1_c7qkm"]
-[ext_resource type="Texture2D" uid="uid://b608jqebaathg" path="res://assets/taskbar/overwhitecat.png" id="2_gwo0e"]
+[ext_resource type="Texture2D" uid="uid://cr0grsacljt2j" path="res://assets/actualunder.png" id="1_c7qkm"]
+[ext_resource type="Texture2D" uid="uid://kqgoh32nnrot" path="res://assets/white_small.png" id="2_gwo0e"]
 [ext_resource type="Texture2D" uid="uid://c2tschtn5cr62" path="res://assets/taskbar/progressuncolered.png" id="3_ycu2k"]
 [ext_resource type="Script" uid="uid://dcyqjdfud0h8g" path="res://white_cat_bar.gd" id="4_exml0"]
 
@@ -10,13 +10,16 @@ offsets = PackedFloat32Array(0, 0.5652174, 1)
 colors = PackedColorArray(1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1)
 
 [node name="WhiteCatBar" type="TextureProgressBar" unique_id=375082903]
-offset_left = 812.00006
-offset_top = 519.0
-offset_right = 1388.0
-offset_bottom = 807.0
-scale = Vector2(0.55524105, 0.5553156)
+offset_left = 888.0
+offset_top = 511.0
+offset_right = 1464.0
+offset_bottom = 799.0
+scale = Vector2(0.45049033, 0.4687326)
+size_flags_horizontal = 4
+nine_patch_stretch = true
 texture_under = ExtResource("1_c7qkm")
 texture_over = ExtResource("2_gwo0e")
 texture_progress = ExtResource("3_ycu2k")
 script = ExtResource("4_exml0")
 color_transition = SubResource("Gradient_c7qkm")
+metadata/_edit_use_anchors_ = true

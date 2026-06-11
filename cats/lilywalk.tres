@@ -1,7 +1,7 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://c8441mmn3yyla"]
 
 [ext_resource type="Texture2D" uid="uid://ef8gdbkkc2ml" path="res://assets/lily_walk.png" id="1_afare"]
-[ext_resource type="Texture2D" uid="uid://cko7ex7u77clx" path="res://assets/russian blue.png" id="2_00evf"]
+[ext_resource type="Texture2D" uid="uid://diqc0mai2olcj" path="res://assets/russian blue-1.png.png" id="2_00evf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1526r"]
 atlas = ExtResource("1_afare")
@@ -21,7 +21,7 @@ region = Rect2(276, 0, 92, 95)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p3kmq"]
 atlas = ExtResource("2_00evf")
-region = Rect2(0, 0, 224, 161)
+region = Rect2(0, 0, 56, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s62sw"]
 atlas = ExtResource("1_afare")

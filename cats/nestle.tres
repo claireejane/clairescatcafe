@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://vb2voo4umeg6" path="res://assets/havana brown.png" id="4_g3qfd"]
 [ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="5_cs05s"]
 [ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cats/cat_data.gd" id="6_w3kg3"]
+[ext_resource type="SpriteFrames" uid="uid://bo353moop838s" path="res://cats/nestlewalk.tres" id="7_1cdk0"]
 
 [resource]
 script = ExtResource("6_w3kg3")
@@ -17,6 +18,7 @@ happiness_bar_overlay = ExtResource("2_1cdk0")
 outside_scene = ExtResource("5_cs05s")
 inside_scene = ExtResource("3_fyx0a")
 happiness_bar = ExtResource("1_njbfi")
+walk = ExtResource("7_1cdk0")
 spawn_weight = 10
 cafe_value = 7
 metadata/_custom_type_script = "uid://c0olgupo47gmq"

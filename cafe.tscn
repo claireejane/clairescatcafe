@@ -1286,11 +1286,9 @@ texture = ExtResource("8_5f1xq")
 [node name="UIScreen" type="CanvasLayer" parent="." unique_id=1084339144]
 
 [node name="UI" type="HFlowContainer" parent="UIScreen" unique_id=316612769]
-offset_left = 7.0000014
-offset_top = 14.0
-offset_right = 583.0
-offset_bottom = 302.0
-scale = Vector2(0.39635804, 0.35457632)
+scale = Vector2(1.047, 1)
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Spawns" type="Node2D" parent="." unique_id=167246968]
 position = Vector2(-141, 2)

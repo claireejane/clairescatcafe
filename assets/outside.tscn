@@ -9,6 +9,10 @@
 [ext_resource type="Resource" uid="uid://v566jygbayd6" path="res://cats/lily.tres" id="3_pipfy"]
 [ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://cats/trixie.tres" id="5_a0svq"]
 [ext_resource type="Resource" uid="uid://my5ha22pmglx" path="res://cats/barney.tres" id="5_hm0gs"]
+[ext_resource type="Resource" uid="uid://r1sdgpk0csis" path="res://cats/asli.tres" id="6_a0svq"]
+[ext_resource type="Resource" uid="uid://bjpyhjgxn6rbw" path="res://cats/nestle.tres" id="7_2ougq"]
+[ext_resource type="Resource" uid="uid://ckju18pfip1b2" path="res://cats/marmalade.tres" id="8_xigr7"]
+[ext_resource type="Resource" uid="uid://7xeftfleiu3" path="res://cats/vicky.tres" id="9_gdcp3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3pw3"]
 texture = ExtResource("1_vt2ta")
@@ -111,7 +115,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-1158, -868, -34, -908,
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_n3pw3")
-possible_cats = Array[ExtResource("2_hm0gs")]([ExtResource("3_pipfy"), ExtResource("5_a0svq"), ExtResource("5_hm0gs")])
+possible_cats = Array[ExtResource("2_hm0gs")]([ExtResource("3_pipfy"), ExtResource("5_a0svq"), ExtResource("5_hm0gs"), ExtResource("6_a0svq"), ExtResource("7_2ougq"), ExtResource("8_xigr7"), ExtResource("9_gdcp3")])
 
 [node name="Cafe" type="StaticBody2D" parent="." unique_id=2059951671]
 z_as_relative = false

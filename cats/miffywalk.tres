@@ -1,6 +1,7 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://bno6q1m6sefm0"]
 
 [ext_resource type="Texture2D" uid="uid://dcyrl0cvy3iig" path="res://assets/miffy_walk.png" id="1_6rggl"]
+[ext_resource type="Texture2D" uid="uid://x41l8e68cims" path="res://assets/cat-1.png (5).png" id="2_1fvd4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1fvd4"]
 atlas = ExtResource("1_6rggl")
@@ -17,6 +18,10 @@ region = Rect2(184, 0, 92, 95)
 [sub_resource type="AtlasTexture" id="AtlasTexture_wn455"]
 atlas = ExtResource("1_6rggl")
 region = Rect2(276, 0, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8avnk"]
+atlas = ExtResource("2_1fvd4")
+region = Rect2(0, 0, 56, 39)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kfd70"]
 atlas = ExtResource("1_6rggl")
@@ -83,6 +88,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8avnk")
+}],
+"loop": true,
+"name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{

@@ -1,7 +1,7 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://cd1scuwe5cwue"]
 
 [ext_resource type="Texture2D" uid="uid://bwkc8rf4kn8yq" path="res://assets/download (1) (2).png" id="1_5qga1"]
-[ext_resource type="Texture2D" uid="uid://60c18kkxqd4k" path="res://assets/marmalade.png" id="2_thai3"]
+[ext_resource type="Texture2D" uid="uid://dh4s5altd5x0h" path="res://assets/marmalade-1.png.png" id="2_thai3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nkwgn"]
 atlas = ExtResource("1_5qga1")
@@ -21,7 +21,7 @@ region = Rect2(276, 0, 92, 95)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_br030"]
 atlas = ExtResource("2_thai3")
-region = Rect2(0, 0, 224, 161)
+region = Rect2(0, 0, 56, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ou7o"]
 atlas = ExtResource("1_5qga1")

@@ -1,7 +1,7 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://bo353moop838s"]
 
 [ext_resource type="Texture2D" uid="uid://i4dyj4yurf4m" path="res://assets/download (3).png" id="1_h0kr8"]
-[ext_resource type="Texture2D" uid="uid://vb2voo4umeg6" path="res://assets/havana brown.png" id="2_x401k"]
+[ext_resource type="Texture2D" uid="uid://c0m06j7fueo5f" path="res://assets/havana brown-1.png.png" id="2_x401k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k0sip"]
 atlas = ExtResource("1_h0kr8")
@@ -21,7 +21,7 @@ region = Rect2(1932, 0, 644, 665)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_la6fd"]
 atlas = ExtResource("2_x401k")
-region = Rect2(0, 0, 224, 161)
+region = Rect2(0, 0, 56, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kmjc"]
 atlas = ExtResource("1_h0kr8")

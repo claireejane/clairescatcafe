@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="3_5p14u"]
 [ext_resource type="Texture2D" uid="uid://bacocrblyq102" path="res://assets/bengal.png" id="4_72uok"]
 [ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="5_p8s71"]
+[ext_resource type="SpriteFrames" uid="uid://0203uecm07df" path="res://cats/vickywalk.tres" id="7_brywa"]
 
 [resource]
 script = ExtResource("1_2yjx1")
@@ -17,6 +18,7 @@ happiness_bar_overlay = ExtResource("2_brywa")
 outside_scene = ExtResource("5_p8s71")
 inside_scene = ExtResource("3_5p14u")
 happiness_bar = ExtResource("1_spbkj")
+walk = ExtResource("7_brywa")
 spawn_weight = 22
 cafe_value = 4
 metadata/_custom_type_script = "uid://c0olgupo47gmq"

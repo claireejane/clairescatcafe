@@ -1,6 +1,7 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://bj7g1w4kovbig"]
 
 [ext_resource type="Texture2D" uid="uid://djk38bmnc6n65" path="res://assets/trixie_walk.png" id="1_xh31f"]
+[ext_resource type="Texture2D" uid="uid://b7ns00ntyemaa" path="res://assets/black-1.png.png" id="2_hovwv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xh31f"]
 atlas = ExtResource("1_xh31f")
@@ -17,6 +18,10 @@ region = Rect2(184, 0, 92, 95)
 [sub_resource type="AtlasTexture" id="AtlasTexture_vxkfg"]
 atlas = ExtResource("1_xh31f")
 region = Rect2(276, 0, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1edk1"]
+atlas = ExtResource("2_hovwv")
+region = Rect2(0, 0, 56, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7gw8a"]
 atlas = ExtResource("1_xh31f")
@@ -83,6 +88,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1edk1")
+}],
+"loop": true,
+"name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
