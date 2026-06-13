@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://do46vyjfh5pky"]
+
+[ext_resource type="Script" uid="uid://cachsc7i8hkyt" path="res://bed.gd" id="1_c32mu"]
+[ext_resource type="Texture2D" uid="uid://cpkx7vymxlcc4" path="res://assets/cafe 1.0/Cafe/Sprite/57.png" id="2_2rykw"]
+[ext_resource type="Texture2D" uid="uid://c7vc7gp47ucgb" path="res://assets/cafe 1.0/Cafe/Sprite/58.png" id="3_k5lfg"]
+[ext_resource type="Texture2D" uid="uid://dvbjas3t3lk06" path="res://assets/cafe 1.0/Cafe/Sprite/59.png" id="4_dfm7h"]
+[ext_resource type="Texture2D" uid="uid://40c14epj4bih" path="res://assets/cafe 1.0/Cafe/Sprite/60.png" id="5_r2v8w"]
+[ext_resource type="Texture2D" uid="uid://d0gkswfaywyh1" path="res://assets/cafe 1.0/CafeForUnity/Sprite/272.png" id="6_nbcr7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpm37"]
+size = Vector2(140, 129)
+
+[node name="Bed" type="StaticBody2D" unique_id=729599657]
+script = ExtResource("1_c32mu")
+colors = Array[Texture2D]([ExtResource("2_2rykw"), ExtResource("3_k5lfg"), ExtResource("4_dfm7h"), ExtResource("5_r2v8w"), ExtResource("6_nbcr7")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1202660190]
+texture = ExtResource("2_2rykw")
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=539395602]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=1413676130]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_tpm37")
+
+[connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]

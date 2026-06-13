@@ -16,6 +16,7 @@ func _ready() -> void:
 	print("starting outside")
 	change_to_outside()
 	current_scene.change_scene.connect(_on_change_scene)
+
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://d1x45c3jq5hft"]
+
+[ext_resource type="Texture2D" uid="uid://bh4c3y4oieofb" path="res://assets/cafe 1.0/Cafe/Sprite/36.png" id="1_jd0nb"]
+[ext_resource type="Script" uid="uid://f3agmln52gwy" path="res://table.gd" id="1_v5i0k"]
+[ext_resource type="Texture2D" uid="uid://doqhb75i8jtjh" path="res://assets/cafe 1.0/Cafe/Sprite/14.png" id="3_xnpc2"]
+[ext_resource type="Texture2D" uid="uid://bkx3vkiy5bfgs" path="res://assets/cafe 1.0/Cafe/Sprite/64.png" id="4_urxxv"]
+[ext_resource type="Texture2D" uid="uid://klndf53a2mho" path="res://assets/cafe 1.0/Cafe/Sprite/65.png" id="5_2us7a"]
+[ext_resource type="Texture2D" uid="uid://b07eqjac6migl" path="res://assets/cafe 1.0/Cafe/Sprite/66.png" id="6_ojgvt"]
+[ext_resource type="Texture2D" uid="uid://5xhb8txtm4by" path="res://assets/cafe 1.0/Cafe/Sprite/67.png" id="7_xl8i4"]
+[ext_resource type="Texture2D" uid="uid://c2achfr5h4axy" path="res://assets/cafe 1.0/Cafe/Sprite/68.png" id="8_cwhfc"]
+[ext_resource type="Texture2D" uid="uid://cwq732skwy4nw" path="res://assets/cafe 1.0/Cafe/Sprite/69.png" id="9_364iv"]
+[ext_resource type="Texture2D" uid="uid://c4ruoaur0lg1g" path="res://assets/cafe 1.0/Cafe/Sprite/70.png" id="10_2y1x0"]
+[ext_resource type="Texture2D" uid="uid://qkqolx5um2m3" path="res://assets/cafe 1.0/Cafe/Sprite/71.png" id="11_1qnqp"]
+
+[node name="Table" type="StaticBody2D" unique_id=1319185922]
+script = ExtResource("1_v5i0k")
+colors = Array[Texture2D]([ExtResource("1_jd0nb"), ExtResource("3_xnpc2"), ExtResource("4_urxxv"), ExtResource("5_2us7a"), ExtResource("6_ojgvt"), ExtResource("7_xl8i4"), ExtResource("8_cwhfc"), ExtResource("9_364iv"), ExtResource("10_2y1x0"), ExtResource("11_1qnqp")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1565459203]
+texture = ExtResource("4_urxxv")
+
+[node name="Normal" type="CollisionPolygon2D" parent="." unique_id=2116360931]
+polygon = PackedVector2Array(-135, 49, -135, -21, 135, -23, 135, 50, 126, 50, 126, 65, 122, 77, 111, 85, 102, 79, 101, 49, -103, 51, -104, 80, -109, 86, -117, 81, -125, 74, -124, 51)
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=1562366110]
+
+[node name="NormalClick" type="CollisionPolygon2D" parent="ClickArea" unique_id=671736117]
+polygon = PackedVector2Array(-135, 49, -134, -83, 135, -84, 135, 50, 126, 50, 126, 65, 122, 77, 111, 85, 102, 79, 101, 49, -103, 51, -104, 80, -109, 86, -117, 81, -125, 74, -124, 51)
+
+[node name="CurvyCollisionClick" type="CollisionPolygon2D" parent="ClickArea" unique_id=1387083638]
+polygon = PackedVector2Array(-45, -105, 41, -106, 73, -93, 103, -61, 119, -37, 119, -5, 87, 21, 65, 49, 51, 58, 71, 88, 85, 86, 83, 102, 65, 112, 42, 90, -45, 89, -63, 110, -85, 110, -84, 88, -69, 87, -48, 57, -77, 48, -107, 10, -124, -17, -124, -42, -75, -94)
+
+[node name="CurvyCollision" type="CollisionPolygon2D" parent="." unique_id=1348465278]
+polygon = PackedVector2Array(-25, -23, 48, -24, 76, -25, 103, -25, 120, -24, 119, -5, 87, 21, 65, 49, 51, 58, 71, 88, 85, 86, 83, 102, 65, 112, 42, 90, -45, 89, -63, 110, -85, 110, -84, 88, -69, 87, -48, 57, -77, 48, -107, 10, -124, -17, -124, -17, -63, -22)
+
+[connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]

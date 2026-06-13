@@ -3,9 +3,32 @@
 [ext_resource type="Texture2D" uid="uid://biu0m57x75g3q" path="res://assets/cafe/Cafe/Floors&Walls/floor200%.png" id="1_5chmy"]
 [ext_resource type="Script" uid="uid://bg7yrl2hh3rvv" path="res://cafe.gd" id="1_n2cq5"]
 [ext_resource type="PackedScene" uid="uid://bqqu3sko0wkv1" path="res://cat_tree.tscn" id="1_xhqke"]
+[ext_resource type="PackedScene" uid="uid://bmvheja7aw5p4" path="res://counter.tscn" id="6_5chmy"]
 [ext_resource type="Texture2D" uid="uid://yjb04txglcnd" path="res://assets/cafe/Cafe/Floors&Walls/wall1.png" id="6_8ejhe"]
 [ext_resource type="Texture2D" uid="uid://blu45ltli2fus" path="res://assets/sample img-1.png.png" id="8_5f1xq"]
 [ext_resource type="Texture2D" uid="uid://b3ulv2neprow3" path="res://assets/cafe/Cafe/Floors&Walls/wall3.png" id="8_23r33"]
+[ext_resource type="PackedScene" uid="uid://mnepurp5s3va" path="res://food.tscn" id="8_yg5ku"]
+[ext_resource type="PackedScene" uid="uid://dg5nmjby8pse8" path="res://plant.tscn" id="9_5f1xq"]
+[ext_resource type="Script" uid="uid://l6lp0x463abu" path="res://plant2.gd" id="10_n2cq5"]
+[ext_resource type="PackedScene" uid="uid://rn0wt6njybs1" path="res://pot.tscn" id="11_8ejhe"]
+[ext_resource type="Script" uid="uid://bqmltyiqrscih" path="res://pot2.gd" id="12_pgpew"]
+[ext_resource type="Texture2D" uid="uid://5b6fytgmw2k6" path="res://assets/cafe 1.0/Cafe/Sprite/142.png" id="12_r4v37"]
+[ext_resource type="Texture2D" uid="uid://b6eb055xrpvda" path="res://assets/cafe 1.0/Cafe/Sprite/143.png" id="13_tl2vl"]
+[ext_resource type="Texture2D" uid="uid://bdudik28gso07" path="res://assets/cafe 1.0/Cafe/Sprite/144.png" id="14_mtxor"]
+[ext_resource type="Texture2D" uid="uid://dbbmcvhwau3e4" path="res://assets/cafe 1.0/Cafe/Sprite/145.png" id="15_shtk2"]
+[ext_resource type="PackedScene" uid="uid://cgooc1ir32rxg" path="res://lights.tscn" id="17_tl2vl"]
+[ext_resource type="PackedScene" uid="uid://dfhhrx3arifd2" path="res://couch.tscn" id="18_mtxor"]
+[ext_resource type="PackedScene" uid="uid://b5fxhbt53b3v0" path="res://sign.tscn" id="19_shtk2"]
+[ext_resource type="PackedScene" uid="uid://do46vyjfh5pky" path="res://bed.tscn" id="20_q2ek6"]
+[ext_resource type="Texture2D" uid="uid://cpkx7vymxlcc4" path="res://assets/cafe 1.0/Cafe/Sprite/57.png" id="21_eyecl"]
+[ext_resource type="Script" uid="uid://dvx7n4xgabc5t" path="res://bed2.gd" id="21_o82cv"]
+[ext_resource type="PackedScene" uid="uid://d1x45c3jq5hft" path="res://table.tscn" id="22_n57xo"]
+[ext_resource type="Script" uid="uid://5oni774urcn" path="res://bed4.gd" id="22_ofxay"]
+[ext_resource type="Texture2D" uid="uid://c7vc7gp47ucgb" path="res://assets/cafe 1.0/Cafe/Sprite/58.png" id="22_vwffi"]
+[ext_resource type="Texture2D" uid="uid://dvbjas3t3lk06" path="res://assets/cafe 1.0/Cafe/Sprite/59.png" id="23_h7mpk"]
+[ext_resource type="Script" uid="uid://d1u22iekffb5m" path="res://bed3.gd" id="23_ofxay"]
+[ext_resource type="Texture2D" uid="uid://40c14epj4bih" path="res://assets/cafe 1.0/Cafe/Sprite/60.png" id="24_fphtj"]
+[ext_resource type="PackedScene" uid="uid://dg58ptvc2oa4r" path="res://chair.tscn" id="29_vwffi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yg5ku"]
 texture = ExtResource("1_5chmy")
@@ -1252,25 +1275,31 @@ sources/2 = SubResource("TileSetAtlasSource_n2cq5")
 size = Vector2(294.00003, 490.75)
 
 [node name="Cafe" type="Node2D" unique_id=1071049736]
-y_sort_enabled = true
 script = ExtResource("1_n2cq5")
 
+[node name="Counter" parent="." unique_id=1654123970 instance=ExtResource("6_5chmy")]
+position = Vector2(-546, 50)
+scale = Vector2(1, 1)
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=5124014]
+z_index = -6
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AADv//f/AQABAAIAAADy//f/AQABAAIAAAD1//f/AQABAAIAAAD4//f/AQABAAIAAAD7//f/AQABAAIAAAD+//f/AQABAAIAAAABAPf/AQABAAIAAAAEAPf/AQABAAIAAAAHAPf/AQABAAIAAAAKAPf/AQABAAIAAAANAPf/AQABAAIAAAAQAPf/AQABAAIAAAACAPf/AQABAAIAAAAPAPf/AQABAAIAAAAOAPf/AQABAAIAAAAMAPf/AQABAAIAAAALAPf/AQABAAIAAAAJAPf/AQABAAIAAAAIAPf/AQABAAIAAAAGAPf/AQABAAIAAAAFAPf/AQABAAIAAAADAPf/AQABAAIAAAAAAPf/AQABAAIAAAD///f/AQABAAIAAAD9//f/AQABAAIAAAD8//f/AQABAAIAAAD6//f/AQABAAIAAAD5//f/AQABAAIAAAD3//f/AQABAAIAAAD2//f/AQABAAIAAAD0//f/AQABAAIAAADz//f/AQABAAIAAADw//f/AQABAAIAAADx//f/AQABAAIAAAA=")
+tile_map_data = PackedByteArray("AADv//f/AQABAAIAAADy//f/AQABAAIAAAD1//f/AQABAAIAAAD4//f/AQABAAIAAAD7//f/AQABAAIAAAD+//f/AQABAAIAAAABAPf/AQABAAIAAAAEAPf/AQABAAIAAAAHAPf/AQABAAIAAAAKAPf/AQABAAIAAAANAPf/AQABAAIAAAAQAPf/AQABAAIAAAACAPf/AQABAAIAAAAPAPf/AQABAAIAAAAOAPf/AQABAAIAAAAMAPf/AQABAAIAAAALAPf/AQABAAIAAAAJAPf/AQABAAIAAAAIAPf/AQABAAIAAAAGAPf/AQABAAIAAAAFAPf/AQABAAIAAAADAPf/AQABAAIAAAAAAPf/AQABAAIAAAD///f/AQABAAIAAAD9//f/AQABAAIAAAD8//f/AQABAAIAAAD6//f/AQABAAIAAAD5//f/AQABAAIAAAD3//f/AQABAAIAAAD2//f/AQABAAIAAAD0//f/AQABAAIAAADz//f/AQABAAIAAADw//f/AQABAAIAAADx//f/AQABAAIAAADs//f/AQABAAIAAAA=")
 tile_set = SubResource("TileSet_8ejhe")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=399428820]
-z_index = -1
-tile_map_data = PackedByteArray("AADe//f/AAACAAEAAAAhAPf/AAABAAAAAAAbAPf/AAABAAAAAAAVAPf/AAABAAAAAAAPAPf/AAABAAAAAAAJAPf/AAABAAAAAAADAPf/AAABAAAAAAAhAP3/AAABAAAAAAAbAP3/AAABAAAAAAAVAP3/AAABAAAAAAAPAP3/AAABAAAAAAAJAP3/AAABAAAAAAADAP3/AAABAAAAAAADAAMAAAABAAAAAAAJAAMAAAABAAAAAAAPAAMAAAABAAAAAAAVAAMAAAABAAAAAAAbAAMAAAABAAAAAAAhAAMAAAABAAAAAAADAAkAAAABAAAAAAAJAAkAAAABAAAAAAAPAAkAAAABAAAAAAAVAAkAAAABAAAAAAAbAAkAAAABAAAAAAAhAAkAAAABAAAAAAAhAA8AAAABAAAAAAAbAA8AAAABAAAAAAAVAA8AAAABAAAAAAAPAA8AAAABAAAAAAADAA8AAAABAAAAAAAJAA8AAAABAAAAAAD9//f/AAABAAAAAAD3//f/AAABAAAAAADx//f/AAABAAAAAADr//f/AAABAAAAAADl//f/AAABAAAAAADf//f/AAABAAAAAADY//f/AAABAAAAAADZ//f/AAABAAAAAADZ//3/AAABAAAAAADf//3/AAABAAAAAADl//3/AAABAAAAAADr//3/AAABAAAAAADx//3/AAABAAAAAAD3//3/AAABAAAAAAD9//3/AAABAAAAAAD9/wMAAAABAAAAAAD9/wkAAAABAAAAAAD9/w8AAAABAAAAAAD3/w8AAAABAAAAAAD3/wkAAAABAAAAAAD3/wMAAAABAAAAAADx/wMAAAABAAAAAADx/wkAAAABAAAAAADx/w8AAAABAAAAAADr/wMAAAABAAAAAADr/wkAAAABAAAAAADr/w8AAAABAAAAAADl/w8AAAABAAAAAADl/wkAAAABAAAAAADl/wMAAAABAAAAAADf/wMAAAABAAAAAADf/wkAAAABAAAAAADf/w8AAAABAAAAAADZ/wMAAAABAAAAAADZ/wkAAAABAAAAAADZ/w8AAAABAAAAAADZ/xUAAAABAAAAAADf/xUAAAABAAAAAADl/xUAAAABAAAAAADr/xUAAAABAAAAAADx/xUAAAABAAAAAAD3/xUAAAABAAAAAAD9/xUAAAABAAAAAAADABUAAAABAAAAAAAJABUAAAABAAAAAAAPABUAAAABAAAAAAAVABUAAAABAAAAAAAbABUAAAABAAAAAAAhABUAAAABAAAAAAA=")
+z_index = -5
+position = Vector2(-8, 0)
+tile_map_data = PackedByteArray("AAAhAPf/AAABAAAAAAAbAPf/AAABAAAAAAAVAPf/AAABAAAAAAAPAPf/AAABAAAAAAAJAPf/AAABAAAAAAADAPf/AAABAAAAAAAhAP3/AAABAAAAAAAbAP3/AAABAAAAAAAVAP3/AAABAAAAAAAPAP3/AAABAAAAAAAJAP3/AAABAAAAAAADAP3/AAABAAAAAAADAAMAAAABAAAAAAAJAAMAAAABAAAAAAAPAAMAAAABAAAAAAAVAAMAAAABAAAAAAAbAAMAAAABAAAAAAAhAAMAAAABAAAAAAADAAkAAAABAAAAAAAJAAkAAAABAAAAAAAPAAkAAAABAAAAAAAVAAkAAAABAAAAAAAbAAkAAAABAAAAAAAhAAkAAAABAAAAAAAhAA8AAAABAAAAAAAbAA8AAAABAAAAAAAVAA8AAAABAAAAAAAPAA8AAAABAAAAAAADAA8AAAABAAAAAAAJAA8AAAABAAAAAAD9//f/AAABAAAAAAD3//f/AAABAAAAAADx//f/AAABAAAAAADr//f/AAABAAAAAADl//f/AAABAAAAAADZ//3/AAABAAAAAADf//3/AAABAAAAAADl//3/AAABAAAAAADr//3/AAABAAAAAADx//3/AAABAAAAAAD3//3/AAABAAAAAAD9//3/AAABAAAAAAD9/wMAAAABAAAAAAD9/wkAAAABAAAAAAD9/w8AAAABAAAAAAD3/w8AAAABAAAAAAD3/wkAAAABAAAAAAD3/wMAAAABAAAAAADx/wMAAAABAAAAAADx/wkAAAABAAAAAADx/w8AAAABAAAAAADr/wMAAAABAAAAAADr/wkAAAABAAAAAADr/w8AAAABAAAAAADl/w8AAAABAAAAAADl/wkAAAABAAAAAADl/wMAAAABAAAAAADf/wMAAAABAAAAAADf/wkAAAABAAAAAADf/w8AAAABAAAAAADZ/wMAAAABAAAAAADZ/wkAAAABAAAAAADZ/w8AAAABAAAAAADZ/xUAAAABAAAAAADf/xUAAAABAAAAAADl/xUAAAABAAAAAADr/xUAAAABAAAAAADx/xUAAAABAAAAAAD3/xUAAAABAAAAAAD9/xUAAAABAAAAAAADABUAAAABAAAAAAAJABUAAAABAAAAAAAPABUAAAABAAAAAAAVABUAAAABAAAAAAAbABUAAAABAAAAAAAhABUAAAABAAAAAADf//f/AAABAAAAAADZ//f/AAABAAAAAAA=")
 tile_set = SubResource("TileSet_8ejhe")
 
 [node name="CatTree" parent="." unique_id=372260949 instance=ExtResource("1_xhqke")]
 z_as_relative = false
-position = Vector2(123, -6)
-scale = Vector2(0.5, 0.5)
+position = Vector2(-59, 139)
+scale = Vector2(0.75, 0.75)
 
 [node name="Door" type="Area2D" parent="." unique_id=1399295481]
+z_index = -5
 
 [node name="DoorIn" type="CollisionShape2D" parent="Door" unique_id=886205762]
 position = Vector2(7.3125, -258.5)
@@ -1294,23 +1323,117 @@ size_flags_vertical = 3
 position = Vector2(-141, 2)
 
 [node name="Spawn1" type="Marker2D" parent="Spawns" unique_id=898604576]
-position = Vector2(153, -58)
+position = Vector2(539, -34)
 metadata/has_cat = false
 
 [node name="Spawn2" type="Marker2D" parent="Spawns" unique_id=1442853637]
-position = Vector2(-538, -78)
+position = Vector2(213, -41)
 metadata/has_cat = false
 
 [node name="Spawn3" type="Marker2D" parent="Spawns" unique_id=579717401]
-position = Vector2(-363, 152)
+position = Vector2(-411, 139)
 metadata/has_cat = false
 
 [node name="Spawn4" type="Marker2D" parent="Spawns" unique_id=1609229996]
-position = Vector2(238, 214)
+position = Vector2(139, 65)
 metadata/has_cat = false
 
 [node name="Spawn5" type="Marker2D" parent="Spawns" unique_id=896358160]
-position = Vector2(479, 103)
+position = Vector2(31, -42)
 metadata/has_cat = false
+
+[node name="Spawn6" type="Marker2D" parent="Spawns" unique_id=742213948]
+position = Vector2(451, -34)
+metadata/has_cat = false
+
+[node name="Spawn7" type="Marker2D" parent="Spawns" unique_id=1246148664]
+position = Vector2(-289, 254)
+metadata/has_cat = false
+
+[node name="Spawn8" type="Marker2D" parent="Spawns" unique_id=531815928]
+position = Vector2(255, 176)
+metadata/has_cat = false
+
+[node name="Spawn9" type="Marker2D" parent="Spawns" unique_id=1379856934]
+position = Vector2(-175, 106)
+metadata/has_cat = false
+
+[node name="Spawn10" type="Marker2D" parent="Spawns" unique_id=1316099439]
+position = Vector2(-14, 299)
+metadata/has_cat = false
+
+[node name="Food" parent="." unique_id=938907508 instance=ExtResource("8_yg5ku")]
+y_sort_enabled = true
+position = Vector2(-425, -66)
+
+[node name="Plant" parent="." unique_id=192915065 instance=ExtResource("9_5f1xq")]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(-167, -221)
+
+[node name="Plant2" parent="." unique_id=894993339 instance=ExtResource("9_5f1xq")]
+z_index = -1
+position = Vector2(178, -221)
+scale = Vector2(-1, 1)
+script = ExtResource("10_n2cq5")
+colors = null
+current_skin = null
+
+[node name="Pot" parent="." unique_id=271116024 instance=ExtResource("11_8ejhe")]
+z_index = -2
+position = Vector2(-166, -185)
+colors = Array[Texture2D]([ExtResource("12_r4v37"), ExtResource("13_tl2vl"), ExtResource("14_mtxor"), ExtResource("15_shtk2")])
+
+[node name="Pot2" parent="." unique_id=142726695 instance=ExtResource("11_8ejhe")]
+z_index = -2
+position = Vector2(179, -184)
+script = ExtResource("12_pgpew")
+colors = Array[Texture2D]([ExtResource("12_r4v37"), ExtResource("13_tl2vl"), ExtResource("14_mtxor"), ExtResource("15_shtk2")])
+current_skin = null
+
+[node name="Lights" parent="." unique_id=1737324451 instance=ExtResource("17_tl2vl")]
+position = Vector2(-314, -378)
+
+[node name="Couch" parent="." unique_id=837689544 instance=ExtResource("18_mtxor")]
+position = Vector2(357, -35)
+scale = Vector2(0.75, 0.75)
+
+[node name="Sign" parent="." unique_id=2002372021 instance=ExtResource("19_shtk2")]
+position = Vector2(-278, -13)
+
+[node name="Bed" parent="." unique_id=729599657 instance=ExtResource("20_q2ek6")]
+z_index = -1
+position = Vector2(-316, 106.00001)
+scale = Vector2(0.66, 0.66)
+colors = Array[Texture2D]([ExtResource("21_eyecl"), ExtResource("22_vwffi"), ExtResource("23_h7mpk"), ExtResource("24_fphtj")])
+
+[node name="Bed2" parent="." unique_id=36295965 instance=ExtResource("20_q2ek6")]
+z_index = -1
+position = Vector2(114, 182.00002)
+scale = Vector2(0.66, 0.66)
+script = ExtResource("21_o82cv")
+colors = Array[Texture2D]([ExtResource("21_eyecl"), ExtResource("22_vwffi"), ExtResource("23_h7mpk"), ExtResource("24_fphtj")])
+
+[node name="Bed4" parent="." unique_id=214794436 instance=ExtResource("20_q2ek6")]
+z_index = -1
+position = Vector2(-157.00002, 305)
+scale = Vector2(0.66, 0.66)
+script = ExtResource("22_ofxay")
+colors = Array[Texture2D]([ExtResource("21_eyecl"), ExtResource("22_vwffi"), ExtResource("23_h7mpk"), ExtResource("24_fphtj")])
+
+[node name="Bed3" parent="." unique_id=1752210603 instance=ExtResource("20_q2ek6")]
+z_index = -1
+position = Vector2(74.00001, -43.999996)
+scale = Vector2(0.66, 0.66)
+script = ExtResource("23_ofxay")
+colors = Array[Texture2D]([ExtResource("21_eyecl"), ExtResource("22_vwffi"), ExtResource("23_h7mpk"), ExtResource("24_fphtj")])
+
+[node name="Table" parent="." unique_id=1319185922 instance=ExtResource("22_n57xo")]
+position = Vector2(357, 118)
+scale = Vector2(0.75, 0.75)
+
+[node name="Chair" parent="." unique_id=153456554 instance=ExtResource("29_vwffi")]
+position = Vector2(356, 250.00002)
+scale = Vector2(0.75, 0.75)
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]

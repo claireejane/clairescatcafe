@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://mnepurp5s3va"]
+
+[ext_resource type="Script" uid="uid://x80uggpj1tfy" path="res://food.gd" id="1_pohk7"]
+[ext_resource type="Texture2D" uid="uid://brwiyey4pfw40" path="res://assets/cafe 1.0/Cafe/Sprite/233.png" id="2_q6vj8"]
+[ext_resource type="Texture2D" uid="uid://jx61ordpbn41" path="res://assets/cafe 1.0/Cafe/Sprite/234.png" id="3_hojwv"]
+[ext_resource type="Texture2D" uid="uid://krmexkidxb4u" path="res://assets/cafe 1.0/Cafe/Sprite/235.png" id="4_5yi55"]
+[ext_resource type="Texture2D" uid="uid://brdheyrr3wktf" path="res://assets/cafe 1.0/Cafe/Sprite/236.png" id="5_welc0"]
+[ext_resource type="Texture2D" uid="uid://dtbgp514wus28" path="res://assets/cafe 1.0/Cafe/Sprite/237.png" id="6_p0hau"]
+[ext_resource type="Texture2D" uid="uid://dpstj4elgmexs" path="res://assets/cafe 1.0/Cafe/Sprite/238.png" id="7_3jsdm"]
+[ext_resource type="Texture2D" uid="uid://cqofyimt8i2e3" path="res://assets/cafe 1.0/Cafe/Sprite/239.png" id="8_0n8bn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8piq"]
+size = Vector2(12.0847645, 19.179886)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5fm71"]
+size = Vector2(137, 105)
+
+[node name="Food" type="StaticBody2D" unique_id=938907508]
+script = ExtResource("1_pohk7")
+colors = Array[Texture2D]([ExtResource("2_q6vj8"), ExtResource("3_hojwv"), ExtResource("4_5yi55"), ExtResource("5_welc0"), ExtResource("6_p0hau"), ExtResource("7_3jsdm"), ExtResource("8_0n8bn")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=958687717]
+texture = ExtResource("2_q6vj8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=684672440]
+position = Vector2(0.9999982, 21.000002)
+rotation = -3.1415925
+scale = Vector2(11.584834, -3.545381)
+shape = SubResource("RectangleShape2D_v8piq")
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=536674632]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=916116908]
+position = Vector2(0.5, -1.5)
+shape = SubResource("RectangleShape2D_5fm71")
+
+[connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]

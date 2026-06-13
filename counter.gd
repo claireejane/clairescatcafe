@@ -1,13 +1,14 @@
 extends StaticBody2D
 @export var colors: Array[Texture2D]
-@export var current_skin := 0
-@onready var color: Sprite2D = $Beige
+@export var current_skin: int
+@onready var color: Sprite2D = $Sprite2D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	current_skin = SaveData.cat_tree_skin
+	current_skin = SaveData.counter_skin
 	set_skin(current_skin)
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -22,7 +23,7 @@ func _on_click_area_input_event(viewport: Node, event: InputEvent, shape_idx: in
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			current_skin = (current_skin+1)%colors.size()
-			SaveData.cat_tree_skin = current_skin
 			set_skin(current_skin)
+			SaveData.counter_skin = current_skin
 				
 		

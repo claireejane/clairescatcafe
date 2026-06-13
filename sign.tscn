@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b5fxhbt53b3v0"]
+
+[ext_resource type="Texture2D" uid="uid://dw2bv8iooaysm" path="res://assets/cafe 1.0/CafeForUnity/Sprite/147.png" id="1_mbcot"]
+[ext_resource type="Script" uid="uid://c4l4ebj6r3alq" path="res://sign.gd" id="1_w2mlg"]
+[ext_resource type="Texture2D" uid="uid://dr1dj7svbklyo" path="res://assets/cafe 1.0/CafeForUnity/Sprite/148.png" id="3_e8cgb"]
+[ext_resource type="Texture2D" uid="uid://t1weinxd82f5" path="res://assets/cafe 1.0/CafeForUnity/Sprite/149.png" id="4_mfcv5"]
+[ext_resource type="Texture2D" uid="uid://bwiwhmkvy3ov5" path="res://assets/cafe 1.0/CafeForUnity/Sprite/150.png" id="5_ykq24"]
+
+[node name="Sign" type="StaticBody2D" unique_id=2002372021]
+script = ExtResource("1_w2mlg")
+colors = Array[Texture2D]([ExtResource("1_mbcot"), ExtResource("3_e8cgb"), ExtResource("4_mfcv5"), ExtResource("5_ykq24")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=130692465]
+position = Vector2(0.6000061, -79.5)
+texture = ExtResource("1_mbcot")
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=759434279]
+position = Vector2(0.6000061, -79.5)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ClickArea" unique_id=692153806]
+polygon = PackedVector2Array(-48, -75, 48, -76, 47, 57, 40, 57, 40, 72, 33, 75, 26, 72, 25, 60, -26, 61, -25, 73, -33, 77, -42, 71, -42, 59, -46, 57)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=626589454]
+position = Vector2(0.80000305, -55.830883)
+scale = Vector2(1, 0.6617646)
+polygon = PackedVector2Array(-49, -6, 46, -8, 47, 57, 40, 57, 40, 72, 33, 75, 26, 72, 25, 60, -26, 61, -25, 73, -33, 77, -42, 71, -42, 59, -46, 57)
+
+[connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]

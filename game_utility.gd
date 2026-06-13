@@ -5,3 +5,4 @@ static func get_game() -> Game:
 	var game := scene_tree.current_scene as Game
 	assert(game, "Trying to get game at an invalid time!")
 	return game
+	

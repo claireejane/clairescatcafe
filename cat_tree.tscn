@@ -15,9 +15,17 @@ script = ExtResource("1_bn7ha")
 colors = Array[Texture2D]([ExtResource("1_cdlbo"), ExtResource("3_024ig"), ExtResource("4_au45u"), ExtResource("5_iyvfl"), ExtResource("6_1k31j")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=42165103]
-position = Vector2(-18, 1)
+position = Vector2(-17.5, -45.5)
 shape = SubResource("RectangleShape2D_y5oud")
 
 [node name="Beige" type="Sprite2D" parent="." unique_id=1630990072]
-position = Vector2(0, -112)
+position = Vector2(0.5, -158.5)
 texture = ExtResource("1_cdlbo")
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=1328258179]
+position = Vector2(0.5, -46.5)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ClickArea" unique_id=835364659]
+polygon = PackedVector2Array(-117, 43, -7, 44, -6, 30, 32, 42, 84, 23, 93, 0, 80, -27, 70, -26, 70, -50, 109, -65, 122, -90, 111, -119, 71, -132, 34, -125, 7, -110, 5, -87, 21, -66, 27, -62, 27, -24, -6, -24, -9, -64, -57, -69, -55, -91, -33, -103, -10, -122, -9, -143, -30, -163, -56, -167, -59, -196, -42, -198, -14, -217, -8, -243, -22, -258, -45, -269, -78, -274, -107, -262, -124, -243, -119, -217, -94, -201, -72, -194, -72, -166, -103, -162, -119, -144, -119, -124, -102, -104, -78, -93, -76, -90, -77, -66, -121, -66)
+
+[connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]

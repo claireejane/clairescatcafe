@@ -15,6 +15,8 @@
 [ext_resource type="Resource" uid="uid://bjpyhjgxn6rbw" path="res://cats/nestle.tres" id="12_fqxx5"]
 
 [node name="Game" type="Node2D" unique_id=1386217610]
+z_as_relative = false
+y_sort_enabled = true
 script = ExtResource("1_n5ebr")
 inside_scene = ExtResource("2_n5ebr")
 outside_scene = ExtResource("2_0aill")
@@ -26,7 +28,6 @@ position = Vector2(-652, -239)
 position = Vector2(12, -31)
 
 [node name="Player" parent="." unique_id=2088908881 instance=ExtResource("9_8i2kb")]
-z_as_relative = true
 position = Vector2(-645, -277)
 
 [node name="Outside" parent="." unique_id=1225810967 instance=ExtResource("2_0aill")]
