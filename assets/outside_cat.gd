@@ -17,6 +17,7 @@ const SPEED = 300.0
 @onready var t_popup: Timer = $PopupTime
 @onready var self_destruct: Timer = $SelfDestruct
 @onready var label: Label = $CanvasLayer/Label
+@onready var outside: Node2D= $".."
 
 var next_position: Vector2
 var walkcycle: String = "down"
@@ -60,9 +61,9 @@ func _physics_process(delta: float) -> void:
 		SaveData.cheats_on = true
 	if Input.is_action_just_pressed("get") and player_near:
 		collect_cat()
-		if SaveData.cafe_progress == 100 or SaveData.cheats_on:
+		if SaveData.cafe_progress == 100 and SaveData.amount_changed>2 or SaveData.cheats_on:
 			print("100% complete") 
-			queue_free()
+			hide()
 			label.show()
 			t_popup.wait_time = 10
 			t_popup.start()
@@ -71,15 +72,7 @@ func _physics_process(delta: float) -> void:
 	
 
 		
-	if SaveData.cafe_progress == 100:
-		print("100% complete") 
-		queue_free()
-		label.show()
-		t_popup.wait_time = 10
-		t_popup.start()
-		var outside = get_tree().find_child("Outside")
-		outside.show_win_screen()
-		
+
 
 
 func collect_cat() -> void:
@@ -96,9 +89,10 @@ func collect_cat() -> void:
 	cat_found.emit(cat_data)
 
 	print("should have found")
-
-	# Kill this exact cat instance.
-	queue_free()
+	if SaveData.cafe_progress != 100 and not SaveData.cheats_on:
+	
+		# Kill this exact cat instance.
+		queue_free()
 
 
 func show_cat_popup() -> void:

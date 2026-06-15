@@ -16,7 +16,7 @@
 [ext_resource type="Resource" uid="uid://b3o8opaoa8awl" path="res://calico.tres" id="10_xigr7"]
 [ext_resource type="Resource" uid="uid://c231282plh1uu" path="res://cats/miffy.tres" id="11_gdcp3"]
 [ext_resource type="Resource" uid="uid://ckbxkp3v2rsxj" path="res://gleeble.tres" id="12_nlxdh"]
-[ext_resource type="Script" uid="uid://cmnyr3i6psu6r" path="res://assets/dialogue.gd" id="16_ap2p8"]
+[ext_resource type="Script" path="res://assets/dialogue.gd" id="16_ap2p8"]
 [ext_resource type="FontFile" uid="uid://cell1kiuffrf7" path="res://assets/ithaca-font/Ithaca-LVB75.ttf" id="16_gdcp3"]
 [ext_resource type="PackedScene" uid="uid://b25vp5qetspu3" path="res://assets/win_screen.tscn" id="19_gdhqm"]
 
