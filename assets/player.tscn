@@ -160,3 +160,5 @@ shape = SubResource("RectangleShape2D_3mip4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=76059937]
 position = Vector2(1, -84)
+
+[connection signal="animation_finished" from="PlayerAnimation" to="." method="_on_player_animation_animation_finished"]

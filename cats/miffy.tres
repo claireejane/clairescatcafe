@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CatData" format=3 uid="uid://c231282plh1uu"]
+
+[ext_resource type="PackedScene" uid="uid://clsd77cl30mhi" path="res://white_cat_bar.tscn" id="1_utteg"]
+[ext_resource type="Texture2D" uid="uid://cnf7r4fjdsnil" path="res://assets/lily_top_bar (2).png" id="2_xwt6w"]
+[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="3_jpjhp"]
+[ext_resource type="Texture2D" uid="uid://tdjq5f1ms42u" path="res://assets/cat.png" id="4_keo8v"]
+[ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="5_7ii43"]
+[ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cats/cat_data.gd" id="6_lm7sk"]
+[ext_resource type="SpriteFrames" uid="uid://bno6q1m6sefm0" path="res://cats/miffywalk.tres" id="7_fjhlv"]
+
+[resource]
+script = ExtResource("6_lm7sk")
+name = "Miffy"
+breed = "White"
+description = "white"
+loaf = ExtResource("4_keo8v")
+happiness_bar_overlay = ExtResource("2_xwt6w")
+outside_scene = ExtResource("5_7ii43")
+inside_scene = ExtResource("3_jpjhp")
+happiness_bar = ExtResource("1_utteg")
+walk = ExtResource("7_fjhlv")
+spawn_weight = 7
+cafe_value = 10
+metadata/_custom_type_script = "uid://c0olgupo47gmq"

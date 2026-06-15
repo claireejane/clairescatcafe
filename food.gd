@@ -25,5 +25,6 @@ func _on_click_area_input_event(viewport: Node, event: InputEvent, shape_idx: in
 			current_skin = (current_skin+1)%colors.size()
 			set_skin(current_skin)
 			SaveData.food_skin = current_skin
+			SaveData.amount_changed += 1
 				
 		

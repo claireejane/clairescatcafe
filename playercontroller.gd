@@ -21,5 +21,6 @@ func _physics_process(delta: float):
 		animated_sprite.play("down")
 	else: animated_sprite.stop()
 	
+	
 
 		

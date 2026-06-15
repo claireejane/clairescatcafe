@@ -46,3 +46,5 @@ func change_to_inside():
 	current_scene.update_cats()
 	player.global_position = inside_spawn.global_position
 	current_scene.change_scene.connect(_on_change_scene)
+	
+	

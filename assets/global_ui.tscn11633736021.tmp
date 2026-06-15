@@ -11,14 +11,35 @@
 [ext_resource type="Resource" uid="uid://r1sdgpk0csis" path="res://cats/asli.tres" id="8_0t2by"]
 [ext_resource type="Resource" uid="uid://ckju18pfip1b2" path="res://cats/marmalade.tres" id="10_0t2by"]
 [ext_resource type="Resource" uid="uid://c231282plh1uu" path="res://cats/miffy.tres" id="11_a1hqd"]
+[ext_resource type="PackedScene" uid="uid://clsd77cl30mhi" path="res://white_cat_bar.tscn" id="11_sphb4"]
 [ext_resource type="Resource" uid="uid://b3o8opaoa8awl" path="res://calico.tres" id="12_27h5q"]
-[ext_resource type="Resource" uid="uid://bjpyhjgxn6rbw" path="res://cats/nestle.tres" id="13_sphb4"]
+[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="13_opcbm"]
+[ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="15_a1hqd"]
+[ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cats/cat_data.gd" id="16_27h5q"]
+[ext_resource type="Texture2D" uid="uid://bs0yiqcxn6uk7" path="res://assets/nestle_top_bar (2).png" id="18_cvehq"]
+[ext_resource type="Texture2D" uid="uid://vb2voo4umeg6" path="res://assets/havana brown.png" id="19_a1hqd"]
 [ext_resource type="Resource" uid="uid://ckbxkp3v2rsxj" path="res://gleeble.tres" id="20_gmwai"]
 [ext_resource type="PackedScene" uid="uid://cx7l7dbovq58l" path="res://assets/cafe_progress.tscn" id="21_27h5q"]
 [ext_resource type="Script" uid="uid://bs7yrobwaje6" path="res://assets/control.gd" id="21_gmwai"]
+[ext_resource type="SpriteFrames" uid="uid://bo353moop838s" path="res://cats/nestlewalk.tres" id="22_ii6ah"]
 
-[sub_resource type="Gradient" id="Gradient_gmwai"]
-colors = PackedColorArray(0.16853693, 0.74504364, 0.9805601, 1, 0.39221954, 0.71179956, 0.39996812, 1)
+[sub_resource type="Resource" id="Resource_27h5q"]
+script = ExtResource("16_27h5q")
+name = "Nestle"
+breed = "Havana Brown "
+description = "eeee"
+loaf = ExtResource("19_a1hqd")
+happiness_bar_overlay = ExtResource("18_cvehq")
+outside_scene = ExtResource("15_a1hqd")
+inside_scene = ExtResource("13_opcbm")
+happiness_bar = ExtResource("11_sphb4")
+walk = ExtResource("22_ii6ah")
+spawn_weight = 5
+cafe_value = 15
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
+
+[sub_resource type="Gradient" id="Gradient_ii6ah"]
+colors = PackedColorArray(0, 0.6784314, 0.92156863, 1, 0.39003003, 0.7218015, 0.26972988, 1)
 
 [node name="GlobalUI" type="CanvasLayer" unique_id=109021020]
 script = ExtResource("1_i8656")
@@ -30,9 +51,9 @@ anchor_top = 0.4691358
 anchor_right = 0.5173611
 anchor_bottom = 0.5308642
 offset_left = -548.0
-offset_top = -270.0
+offset_top = -314.0
 offset_right = -548.0
-offset_bottom = -270.0
+offset_bottom = -314.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
@@ -161,15 +182,15 @@ scale = Vector2(3.0868814, 2.250694)
 localize_numeral_system = false
 cat_data = ExtResource("12_27h5q")
 
-[node name="CatSlotNestle" parent="CatMenuPanel/CatSlotHolder" unique_id=592076973 instance=ExtResource("4_kvwha")]
+[node name="CatSlotNestle" parent="CatMenuPanel/CatSlotHolder" unique_id=1406388613 instance=ExtResource("4_kvwha")]
 layout_mode = 0
-offset_left = 641.0
-offset_top = 319.0
-offset_right = 681.0
-offset_bottom = 359.0
+offset_left = 644.0
+offset_top = 320.0
+offset_right = 684.0
+offset_bottom = 360.0
 scale = Vector2(3.0868814, 2.250694)
 localize_numeral_system = false
-cat_data = ExtResource("13_sphb4")
+cat_data = SubResource("Resource_27h5q")
 
 [node name="CatSlotGleeble" parent="CatMenuPanel/CatSlotHolder" unique_id=1078331943 instance=ExtResource("4_kvwha")]
 layout_mode = 0
@@ -188,6 +209,8 @@ offset_top = -246.0
 offset_right = -396.99994
 offset_bottom = -206.0
 scale = Vector2(2.0550027, 1.5997678)
+script = ExtResource("21_gmwai")
+color_transition = SubResource("Gradient_ii6ah")
 
 [node name="CafeProgress" parent="CatMenuPanel/Control" unique_id=1891675527 instance=ExtResource("21_27h5q")]
 layout_mode = 0
@@ -195,5 +218,3 @@ offset_left = 487.0
 offset_top = 355.0
 offset_right = 679.0
 offset_bottom = 547.0
-script = ExtResource("21_gmwai")
-color_transition = SubResource("Gradient_gmwai")

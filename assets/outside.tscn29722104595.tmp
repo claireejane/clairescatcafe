@@ -14,11 +14,7 @@
 [ext_resource type="Resource" uid="uid://ckju18pfip1b2" path="res://cats/marmalade.tres" id="8_xigr7"]
 [ext_resource type="Resource" uid="uid://7xeftfleiu3" path="res://cats/vicky.tres" id="9_gdcp3"]
 [ext_resource type="Resource" uid="uid://b3o8opaoa8awl" path="res://calico.tres" id="10_xigr7"]
-[ext_resource type="Resource" uid="uid://c231282plh1uu" path="res://cats/miffy.tres" id="11_gdcp3"]
-[ext_resource type="Resource" uid="uid://ckbxkp3v2rsxj" path="res://gleeble.tres" id="12_nlxdh"]
-[ext_resource type="Script" uid="uid://cmnyr3i6psu6r" path="res://assets/dialogue.gd" id="16_ap2p8"]
-[ext_resource type="FontFile" uid="uid://cell1kiuffrf7" path="res://assets/ithaca-font/Ithaca-LVB75.ttf" id="16_gdcp3"]
-[ext_resource type="PackedScene" uid="uid://b25vp5qetspu3" path="res://assets/win_screen.tscn" id="19_gdhqm"]
+[ext_resource type="Resource" uid="uid://c231282plh1uu" path="res://miffy.tres" id="11_gdcp3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3pw3"]
 texture = ExtResource("1_vt2ta")
@@ -121,7 +117,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-1665, -1165, -301, -11
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_n3pw3")
-possible_cats = Array[ExtResource("2_hm0gs")]([ExtResource("3_pipfy"), ExtResource("5_a0svq"), ExtResource("5_hm0gs"), ExtResource("6_a0svq"), ExtResource("7_2ougq"), ExtResource("8_xigr7"), ExtResource("9_gdcp3"), ExtResource("10_xigr7"), ExtResource("11_gdcp3"), ExtResource("12_nlxdh")])
+possible_cats = Array[ExtResource("2_hm0gs")]([ExtResource("3_pipfy"), ExtResource("5_a0svq"), ExtResource("5_hm0gs"), ExtResource("6_a0svq"), ExtResource("7_2ougq"), ExtResource("8_xigr7"), ExtResource("9_gdcp3"), ExtResource("10_xigr7"), ExtResource("11_gdcp3")])
 
 [node name="Cafe" type="StaticBody2D" parent="." unique_id=2059951671]
 z_as_relative = false
@@ -170,72 +166,6 @@ position = Vector2(-918, -157)
 
 [node name="Spawn3" type="Marker2D" parent="Spawns" unique_id=1723978237]
 position = Vector2(-135, 138)
-
-[node name="Dialogue" type="CanvasLayer" parent="." unique_id=1113685252]
-script = ExtResource("16_ap2p8")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Dialogue" unique_id=1472200925]
-offset_left = 413.0
-offset_top = 118.0
-offset_right = 740.0
-offset_bottom = 231.0
-
-[node name="Congrats" type="Label" parent="Dialogue/VBoxContainer" unique_id=450538294]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("16_gdcp3")
-theme_override_font_sizes/font_size = 40
-text = "LFG! YOU FOUND"
-horizontal_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Dialogue/VBoxContainer" unique_id=1923487048]
-layout_mode = 2
-alignment = 1
-
-[node name="CatName" type="Label" parent="Dialogue/VBoxContainer/HBoxContainer" unique_id=453666683]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("16_gdcp3")
-theme_override_font_sizes/font_size = 40
-text = "Mochi"
-horizontal_alignment = 1
-
-[node name="Difficulty" type="Label" parent="Dialogue/VBoxContainer/HBoxContainer" unique_id=523165377]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("16_gdcp3")
-theme_override_font_sizes/font_size = 40
-text = "- RARE CAT"
-
-[node name="CafeBonus" type="Label" parent="Dialogue/VBoxContainer" unique_id=1287445752]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("16_gdcp3")
-theme_override_font_sizes/font_size = 40
-text = "+20 CAFE BONUS"
-horizontal_alignment = 1
-
-[node name="WinScreen" parent="Dialogue" unique_id=1771067026 instance=ExtResource("19_gdhqm")]
-position = Vector2(535, 175.00009)
-scale = Vector2(5.0145407, 4.945619)
-
-[node name="WinText" type="Label" parent="Dialogue" unique_id=11586430]
-offset_left = 369.0
-offset_top = 87.0
-offset_right = 710.0
-offset_bottom = 140.0
-scale = Vector2(0.98804486, 1.1805558)
-theme_override_colors/font_color = Color(0.4627451, 0, 0.29411766, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("16_gdcp3")
-theme_override_font_sizes/font_size = 27
-text = "Your cat cafe was a meowing success!
-YOU WIN"
-horizontal_alignment = 1
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="timeout" from="CatTimer" to="." method="_on_cat_timer_timeout"]

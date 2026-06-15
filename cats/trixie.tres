@@ -19,6 +19,6 @@ outside_scene = ExtResource("2_v7ri6")
 inside_scene = ExtResource("3_iolt7")
 happiness_bar = ExtResource("1_ub0wr")
 walk = ExtResource("7_pofsb")
-spawn_weight = 14
+spawn_weight = 13
 cafe_value = 7
 metadata/_custom_type_script = "uid://c0olgupo47gmq"

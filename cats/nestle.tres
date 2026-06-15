@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CatData" format=3 uid="uid://bjpyhjgxn6rbw"]
 
 [ext_resource type="PackedScene" uid="uid://clsd77cl30mhi" path="res://white_cat_bar.tscn" id="1_njbfi"]
-[ext_resource type="Texture2D" uid="uid://dd2te8b6xpi4g" path="res://assets/nestle_top_bar.png" id="2_1cdk0"]
+[ext_resource type="Texture2D" uid="uid://bs0yiqcxn6uk7" path="res://assets/nestle_top_bar (2).png" id="2_1cdk0"]
 [ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="3_fyx0a"]
 [ext_resource type="Texture2D" uid="uid://vb2voo4umeg6" path="res://assets/havana brown.png" id="4_g3qfd"]
 [ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="5_cs05s"]
@@ -19,6 +19,6 @@ outside_scene = ExtResource("5_cs05s")
 inside_scene = ExtResource("3_fyx0a")
 happiness_bar = ExtResource("1_njbfi")
 walk = ExtResource("7_1cdk0")
-spawn_weight = 10
-cafe_value = 7
+spawn_weight = 5
+cafe_value = 15
 metadata/_custom_type_script = "uid://c0olgupo47gmq"

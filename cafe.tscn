@@ -1315,12 +1315,23 @@ texture = ExtResource("8_5f1xq")
 [node name="UIScreen" type="CanvasLayer" parent="." unique_id=1084339144]
 
 [node name="UI" type="VBoxContainer" parent="UIScreen" unique_id=245258748]
-scale = Vector2(1.047, 1)
-size_flags_horizontal = 3
+scale = Vector2(1.2, 1.4)
+size_flags_horizontal = 2
+size_flags_vertical = 3
+
+[node name="UI2" type="VBoxContainer" parent="UIScreen" unique_id=1930044235]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -47.0
+offset_right = -47.0
+grow_horizontal = 0
+scale = Vector2(1.2, 1.4)
+size_flags_horizontal = 10
 size_flags_vertical = 3
 
 [node name="Spawns" type="Node2D" parent="." unique_id=167246968]
-position = Vector2(-141, 2)
+position = Vector2(-293, 2)
 
 [node name="Spawn1" type="Marker2D" parent="Spawns" unique_id=898604576]
 position = Vector2(539, -34)
@@ -1365,6 +1376,7 @@ metadata/has_cat = false
 [node name="Food" parent="." unique_id=938907508 instance=ExtResource("8_yg5ku")]
 y_sort_enabled = true
 position = Vector2(-425, -66)
+current_skin = null
 
 [node name="Plant" parent="." unique_id=192915065 instance=ExtResource("9_5f1xq")]
 z_index = -1

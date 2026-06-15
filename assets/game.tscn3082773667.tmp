@@ -22,8 +22,6 @@ inside_scene = ExtResource("2_n5ebr")
 outside_scene = ExtResource("2_0aill")
 
 [node name="GlobalUI" parent="." unique_id=109021020 instance=ExtResource("4_lpx4e")]
-cat_inventory = null
-is_open = null
 
 [node name="OutsideSpawn" type="Marker2D" parent="." unique_id=687460864]
 position = Vector2(-652, -239)

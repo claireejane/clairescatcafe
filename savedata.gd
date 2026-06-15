@@ -16,10 +16,24 @@ static var bed3_skin = 0
 static var bed4_skin = 0
 static var table_skin = 0
 static var chair_skin = 0
-
+static var vicky = 100
+static var barney = 100
+static var trixie = 100
+static var asli = 100
+static var lily = 100
+static var marmalade = 100
+static var miffy = 100
+static var calico = 100
+static var nestle = 100
+static var gleeble = 100
+static var cat_amount = 0
+static var amount_changed = 0
+static var most_recent_cat = ""
+static var cafe_progress = 1
 
 
 func _init() -> void:
 	pass
 	
+
 	

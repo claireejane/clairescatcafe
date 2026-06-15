@@ -2,6 +2,7 @@ extends Node2D
 @export var cat_data: Array[CatData] = []
 @onready var ui: CanvasLayer = $"../GlobalUI"
 @onready var cafe_ui: VBoxContainer = $UIScreen/UI
+@onready var cafe_ui2: VBoxContainer = $UIScreen/UI2
 @onready var spawns: Node2D = $Spawns
 signal change_scene()
 
@@ -11,8 +12,10 @@ func _ready() -> void:
 func _process(float) -> void:
 	pass
 					
-func update_cats() -> void:				
+func update_cats() -> void:	
+	var count = 0			
 	for data in ui.cat_inventory:
+		count +=1
 		var new_cat = data.inside_scene.instantiate()
 		new_cat.cat_data = data
 		if new_cat.cat_data.inside_spot == "none":
@@ -24,9 +27,18 @@ func update_cats() -> void:
 		var new_bar = data.happiness_bar.instantiate()
 		new_bar.texture_over = data.happiness_bar_overlay
 		new_cat.update_happiness_bar.connect(new_bar.update_happiness_tint)
+		
 		add_child(new_cat)
-		cafe_ui.add_child(new_bar)
-	
+		if count > 5:
+			cafe_ui2.add_child(new_bar)
+			print(new_bar.size)
+			new_bar.set_size(new_bar.size * 2)
+			print(new_bar.size)
+		else:
+			cafe_ui.add_child(new_bar)
+			print(new_bar.size)
+			new_bar.set_size(new_bar.size * 2)
+			print(new_bar.size)
 
 func _on_door_body_entered(body: Node2D) -> void:
 	if body.name == "Player":

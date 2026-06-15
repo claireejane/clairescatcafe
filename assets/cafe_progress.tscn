@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cx7l7dbovq58l"]
+
+[ext_resource type="Texture2D" uid="uid://cocqce5vnyv30" path="res://assets/ms_friends-3.png.png" id="1_qyc7v"]
+[ext_resource type="Texture2D" uid="uid://bdaq2ykogr6bc" path="res://assets/ms_friends-1.png (3).png" id="2_ml4xv"]
+[ext_resource type="Texture2D" uid="uid://d22h4etdyowo8" path="res://assets/ms_friends-2.png.png" id="3_nvhg0"]
+
+[node name="CafeProgress" type="TextureProgressBar" unique_id=1891675527]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_under = ExtResource("1_qyc7v")
+texture_over = ExtResource("2_ml4xv")
+texture_progress = ExtResource("3_nvhg0")
