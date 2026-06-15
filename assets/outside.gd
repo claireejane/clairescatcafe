@@ -17,6 +17,7 @@ signal change_scene()
 func _ready() -> void:
 	timer.start()
 	win_screen.hide() 
+	win_text.hide()
 	
 func _process(float) -> void:
 	if Input.is_action_just_pressed("g")	:

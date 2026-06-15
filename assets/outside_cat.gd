@@ -56,10 +56,19 @@ func setup_ui_labels() -> void:
 func _physics_process(delta: float) -> void:
 	if idle_duration.is_stopped():
 		_move_cat()
-
+	if Input.is_action_just_pressed("c"):
+		SaveData.cheats_on = true
 	if Input.is_action_just_pressed("get") and player_near:
 		collect_cat()
-		
+		if SaveData.cafe_progress == 100 or SaveData.cheats_on:
+			print("100% complete") 
+			queue_free()
+			label.show()
+			t_popup.wait_time = 10
+			t_popup.start()
+			#here
+			outside.show_win_screen()
+	
 
 		
 	if SaveData.cafe_progress == 100:
@@ -68,7 +77,7 @@ func _physics_process(delta: float) -> void:
 		label.show()
 		t_popup.wait_time = 10
 		t_popup.start()
-		var outside = GameUtility.get_game().find_child("Outside")
+		var outside = get_tree().find_child("Outside")
 		outside.show_win_screen()
 		
 
