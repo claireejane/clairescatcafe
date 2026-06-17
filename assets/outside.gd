@@ -1,6 +1,5 @@
 extends Node2D
 
-
 @export var possible_cats: Array[CatData] = []
 @export var all_cats: Array[CharacterBody2D] = []
 @onready var spawns: Node2D = $Spawns
@@ -10,24 +9,26 @@ signal change_scene()
 @onready var dialogue: CanvasLayer = $Dialogue
 @onready var win_screen: AnimatedSprite2D = $Dialogue/WinScreen
 @onready var v_box_container: VBoxContainer = $Dialogue/VBoxContainer
-@onready var win_text: Label = $Dialogue/WinText
-
-
+@onready var win_timer: Timer = $Timer
+var speedrun_time = 0
+@onready var speedrun: Label = $Dialogue/VBoxContainer2/Speedrun
+@onready var fav_cat: Label = $Dialogue/VBoxContainer2/FavCat
+@onready var win_text: Label = $Dialogue/VBoxContainer2/WinText
+var starttime
 
 func _ready() -> void:
 	timer.start()
 	win_screen.hide() 
 	win_text.hide()
+	speedrun.hide()
+	fav_cat.hide()
+	starttime = Time.get_unix_time_from_system()
+	ui.all_done.connect(show_win_screen)
+
 	
-func _process(float) -> void:
-	if Input.is_action_just_pressed("g")	:
-		delete_all_cats()
-		v_box_container.hide()
-		dialogue.show()
-		win_screen.show()
-		win_screen.play("default")
-		win_text.shoW()
-		
+func _process(delta: float) -> void:
+	pass
+	
 
 		
 func _spawn_cat() -> void: 
@@ -38,7 +39,6 @@ func _spawn_cat() -> void:
 	new_cat.cat_data = chosen_cat_data
 	new_cat.cat_found.connect(ui.on_cat_found) #when this spawned cat does cat_found, call on_cat_found)
 	new_cat.cat_found.connect(dialogue.on_cat_found) ##what esle i gotta connect
-	ui.all_done.connect(delete_all_cats)
 	var spawn_point = spawns.get_children().pick_random()
 	add_child(new_cat)
 	all_cats.append(new_cat)
@@ -55,12 +55,7 @@ func _pick_cat() -> CatData:
 			return data
 	return possible_cats.pick_random()	
 		
-func _on_cat_timer_timeout() -> void:
-	if visible: _spawn_cat()
-	
 func _on_door_body_entered(body: Node2D) -> void:
-	
-	
 	if body.name == "Player":
 		change_scene.emit()
 		
@@ -74,8 +69,27 @@ func delete_all_cats() -> void:
 		
 
 func show_win_screen() -> void:
+	speedrun_time = str(Time.get_time_string_from_unix_time(Time.get_unix_time_from_system() - starttime))
+	speedrun.text = "Total Time Taken: \n" + speedrun_time
+	fav_cat.text = "Favourite Cat: " + SaveData.favourite_cat
 	v_box_container.hide()
 	dialogue.show()
 	win_screen.show()
 	win_screen.play("default")
 	win_text.show()
+	speedrun.show()
+	fav_cat.show()
+	timer.stop()
+	win_timer.start()
+	
+
+
+func _on_cat_timer_timeout() -> void:
+	_spawn_cat()
+
+
+func _on_timer_timeout() -> void:
+	win_screen.hide() 
+	win_text.hide()
+	speedrun.hide()
+	fav_cat.hide()

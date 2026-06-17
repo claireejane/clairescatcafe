@@ -5,14 +5,337 @@
 [ext_resource type="PackedScene" uid="uid://ducjqrj35iyit" path="res://cafe.tscn" id="2_n5ebr"]
 [ext_resource type="PackedScene" uid="uid://c43htjkg3afel" path="res://assets/global_ui.tscn" id="4_lpx4e"]
 [ext_resource type="Script" uid="uid://c0olgupo47gmq" path="res://cats/cat_data.gd" id="5_i24q8"]
-[ext_resource type="Resource" uid="uid://v566jygbayd6" path="res://cats/lily.tres" id="6_5fe3y"]
-[ext_resource type="Resource" uid="uid://cwjvypjrqycbt" path="res://cats/trixie.tres" id="7_mdhdh"]
-[ext_resource type="Resource" uid="uid://my5ha22pmglx" path="res://cats/barney.tres" id="8_6sdns"]
+[ext_resource type="PackedScene" uid="uid://clsd77cl30mhi" path="res://white_cat_bar.tscn" id="7_xuk7t"]
+[ext_resource type="Texture2D" uid="uid://cnf7r4fjdsnil" path="res://assets/lily_top_bar (2).png" id="8_gns88"]
 [ext_resource type="PackedScene" uid="uid://d3efcr11rkdl8" path="res://assets/player.tscn" id="9_8i2kb"]
-[ext_resource type="Resource" uid="uid://ckju18pfip1b2" path="res://cats/marmalade.tres" id="9_q06ww"]
-[ext_resource type="Resource" uid="uid://7xeftfleiu3" path="res://cats/vicky.tres" id="10_d8h1w"]
-[ext_resource type="Resource" uid="uid://r1sdgpk0csis" path="res://cats/asli.tres" id="11_kb02g"]
-[ext_resource type="Resource" uid="uid://bjpyhjgxn6rbw" path="res://cats/nestle.tres" id="12_fqxx5"]
+[ext_resource type="PackedScene" uid="uid://b1pc40nd326fn" path="res://cats/cat.tscn" id="9_xdr15"]
+[ext_resource type="Texture2D" uid="uid://cko7ex7u77clx" path="res://assets/russian blue.png" id="10_78ujs"]
+[ext_resource type="PackedScene" uid="uid://cv1qdxsxd3vu6" path="res://assets/outside_cat.tscn" id="11_oqa0s"]
+[ext_resource type="SpriteFrames" uid="uid://c8441mmn3yyla" path="res://cats/lilywalk.tres" id="12_sewwa"]
+[ext_resource type="Texture2D" uid="uid://c6bpodnqusiu4" path="res://assets/trixie_top_bar (2).png" id="13_wdkc0"]
+[ext_resource type="Texture2D" uid="uid://h48h83r1qmow" path="res://assets/black.png" id="14_1hbma"]
+[ext_resource type="SpriteFrames" uid="uid://bj7g1w4kovbig" path="res://cats/trixiewalk.tres" id="15_6qqpq"]
+[ext_resource type="Texture2D" uid="uid://cbh8dhc10seqd" path="res://assets/barney_top_bar.png" id="16_qvcga"]
+[ext_resource type="Texture2D" uid="uid://d1btpn17poj4s" path="res://assets/tuxedo.png" id="17_wdwws"]
+[ext_resource type="SpriteFrames" uid="uid://cbwuplhnh5xu5" path="res://cats/barneywalk.tres" id="18_or8wo"]
+[ext_resource type="Texture2D" uid="uid://ru7ga7stgawb" path="res://assets/marmalade_top_bar.png" id="19_jf5te"]
+[ext_resource type="Texture2D" uid="uid://60c18kkxqd4k" path="res://assets/marmalade.png" id="20_6p1yv"]
+[ext_resource type="SpriteFrames" uid="uid://cd1scuwe5cwue" path="res://cats/marmaladewalk.tres" id="21_jqctu"]
+[ext_resource type="Texture2D" uid="uid://ctltpbtrhor7d" path="res://assets/vicky_top_bar.png" id="22_mevvh"]
+[ext_resource type="Texture2D" uid="uid://bacocrblyq102" path="res://assets/bengal.png" id="23_prxnp"]
+[ext_resource type="SpriteFrames" uid="uid://0203uecm07df" path="res://cats/vickywalk.tres" id="24_cpbdu"]
+[ext_resource type="Texture2D" uid="uid://nuv0oec4l1y0" path="res://assets/asli_top_bar.png" id="25_drtnu"]
+[ext_resource type="Texture2D" uid="uid://btejjakcufsbt" path="res://assets/asli_loaf.png" id="26_me805"]
+[ext_resource type="SpriteFrames" uid="uid://0745lm3kq51s" path="res://cats/asliwalk.tres" id="27_861v0"]
+[ext_resource type="Texture2D" uid="uid://bs0yiqcxn6uk7" path="res://assets/nestle_top_bar (2).png" id="28_n6l5q"]
+[ext_resource type="Texture2D" uid="uid://vb2voo4umeg6" path="res://assets/havana brown.png" id="29_6lwa0"]
+[ext_resource type="SpriteFrames" uid="uid://bo353moop838s" path="res://cats/nestlewalk.tres" id="30_j8b0p"]
+[ext_resource type="Texture2D" uid="uid://bj5tus0bgxjb5" path="res://assets/cat-1.png (7).png" id="31_k076q"]
+[ext_resource type="SpriteFrames" uid="uid://bno6q1m6sefm0" path="res://cats/miffywalk.tres" id="32_3c10k"]
+[ext_resource type="Texture2D" uid="uid://dhcx3vs10tc85" path="res://assets/New Piskel-1.png (4)-1.png (2).png" id="33_0lx88"]
+[ext_resource type="Texture2D" uid="uid://bhuybaj0xbt6c" path="res://assets/cat-1.png (6).png" id="34_0wkop"]
+[ext_resource type="Texture2D" uid="uid://cr8buqrehd061" path="res://assets/download (10).png" id="35_myesb"]
+[ext_resource type="Texture2D" uid="uid://jjn15jfbc1ep" path="res://assets/cat-1.png (4).png" id="36_5pgm1"]
+[ext_resource type="Texture2D" uid="uid://c8lwq22lqjaai" path="res://assets/New Piskel-1.png (4)-1.png (1).png" id="37_3uwtb"]
+[ext_resource type="Texture2D" uid="uid://b88p2w15jn6ri" path="res://assets/calico.png" id="38_p75sm"]
+[ext_resource type="SpriteFrames" uid="uid://dmhkhvngmqfrd" path="res://cats/calicowalk.tres" id="39_dnmxa"]
+
+[sub_resource type="Resource" id="Resource_mo6uq"]
+script = ExtResource("5_i24q8")
+name = "Lily"
+breed = "Russian Blue"
+description = "A sweet, occasionally moody girl who loves to rub her face against yours."
+loaf = ExtResource("10_78ujs")
+happiness_bar_overlay = ExtResource("8_gns88")
+outside_scene = ExtResource("11_oqa0s")
+inside_scene = ExtResource("9_xdr15")
+happiness_bar = ExtResource("7_xuk7t")
+walk = ExtResource("12_sewwa")
+spawn_weight = 9
+cafe_value = 8
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
+
+[sub_resource type="Resource" id="Resource_m5bhp"]
+script = ExtResource("5_i24q8")
+name = "Trixie"
+breed = "Black Cat"
+description = "While some may think she's unlucky, reports have shown that she has gotten one million slingoes!!"
+loaf = ExtResource("14_1hbma")
+happiness_bar_overlay = ExtResource("13_wdkc0")
+outside_scene = ExtResource("11_oqa0s")
+inside_scene = ExtResource("9_xdr15")
+happiness_bar = ExtResource("7_xuk7t")
+walk = ExtResource("15_6qqpq")
+spawn_weight = 13
+cafe_value = 7
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
+
+[sub_resource type="Resource" id="Resource_kc8uy"]
+script = ExtResource("5_i24q8")
+name = "Barney Stinson"
+breed = "Tuxedo"
+description = "Suit up!"
+loaf = ExtResource("17_wdwws")
+happiness_bar_overlay = ExtResource("16_qvcga")
+outside_scene = ExtResource("11_oqa0s")
+inside_scene = ExtResource("9_xdr15")
+happiness_bar = ExtResource("7_xuk7t")
+walk = ExtResource("18_or8wo")
+spawn_weight = 16
+cafe_value = 5
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
+
+[sub_resource type="Resource" id="Resource_vg4i6"]
+script = ExtResource("5_i24q8")
+name = "Marmalade"
+breed = "Orange Cat"
+description = "Absolute balls-grabber and meat puller "
+loaf = ExtResource("20_6p1yv")
+happiness_bar_overlay = ExtResource("19_jf5te")
+outside_scene = ExtResource("11_oqa0s")
+inside_scene = ExtResource("9_xdr15")
+happiness_bar = ExtResource("7_xuk7t")
+walk = ExtResource("21_jqctu")
+spawn_weight = 8
+cafe_value = 11
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
+
+[sub_resource type="Resource" id="Resource_ggkcb"]
+script = ExtResource("5_i24q8")
+name = "Vicky"
+breed = "Bengal"
+description = "This cat loves a good adventure!"
+loaf = ExtResource("23_prxnp")
+happiness_bar_overlay = ExtResource("22_mevvh")
+outside_scene = ExtResource("11_oqa0s")
+inside_scene = ExtResource("9_xdr15")
+happiness_bar = ExtResource("7_xuk7t")
+walk = ExtResource("24_cpbdu")
+spawn_weight = 22
+cafe_value = 4
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
+
+[sub_resource type="Resource" id="Resource_tq0ex"]
+script = ExtResource("5_i24q8")
+name = "Asli"
+breed = "??"
+description = "..."
+loaf = ExtResource("26_me805")
+happiness_bar_overlay = ExtResource("25_drtnu")
+outside_scene = ExtResource("11_oqa0s")
+inside_scene = ExtResource("9_xdr15")
+happiness_bar = ExtResource("7_xuk7t")
+walk = ExtResource("27_861v0")
+spawn_weight = 11
+cafe_value = 7
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
+
+[sub_resource type="Resource" id="Resource_hcyuq"]
+script = ExtResource("5_i24q8")
+name = "Nestle"
+breed = "Havana Brown"
+description = "Good enough to eat"
+loaf = ExtResource("29_6lwa0")
+happiness_bar_overlay = ExtResource("28_n6l5q")
+outside_scene = ExtResource("11_oqa0s")
+inside_scene = ExtResource("9_xdr15")
+happiness_bar = ExtResource("7_xuk7t")
+walk = ExtResource("30_j8b0p")
+spawn_weight = 5
+cafe_value = 15
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
+
+[sub_resource type="Resource" id="Resource_01a5h"]
+script = ExtResource("5_i24q8")
+name = "Miffy"
+breed = "White"
+description = "white"
+loaf = ExtResource("31_k076q")
+happiness_bar_overlay = ExtResource("8_gns88")
+outside_scene = ExtResource("11_oqa0s")
+inside_scene = ExtResource("9_xdr15")
+happiness_bar = ExtResource("7_xuk7t")
+walk = ExtResource("32_3c10k")
+spawn_weight = 7
+cafe_value = 10
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27j2h"]
+atlas = ExtResource("35_myesb")
+region = Rect2(0, 0, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsj14"]
+atlas = ExtResource("35_myesb")
+region = Rect2(92, 0, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44cun"]
+atlas = ExtResource("35_myesb")
+region = Rect2(184, 0, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajp1m"]
+atlas = ExtResource("35_myesb")
+region = Rect2(276, 0, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drvup"]
+atlas = ExtResource("36_5pgm1")
+region = Rect2(0, 0, 56, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4jqu"]
+atlas = ExtResource("35_myesb")
+region = Rect2(0, 285, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rm7o"]
+atlas = ExtResource("35_myesb")
+region = Rect2(92, 285, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfhfi"]
+atlas = ExtResource("35_myesb")
+region = Rect2(184, 285, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7h5m"]
+atlas = ExtResource("35_myesb")
+region = Rect2(276, 285, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fdfj"]
+atlas = ExtResource("35_myesb")
+region = Rect2(0, 95, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3swms"]
+atlas = ExtResource("35_myesb")
+region = Rect2(92, 95, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujpue"]
+atlas = ExtResource("35_myesb")
+region = Rect2(184, 95, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0644n"]
+atlas = ExtResource("35_myesb")
+region = Rect2(276, 95, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwlgy"]
+atlas = ExtResource("35_myesb")
+region = Rect2(0, 190, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svb7w"]
+atlas = ExtResource("35_myesb")
+region = Rect2(92, 190, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34bwy"]
+atlas = ExtResource("35_myesb")
+region = Rect2(184, 190, 92, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3dka"]
+atlas = ExtResource("35_myesb")
+region = Rect2(276, 190, 92, 95)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8fu1g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27j2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsj14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44cun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajp1m")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drvup")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4jqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rm7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfhfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7h5m")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fdfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3swms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujpue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0644n")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwlgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svb7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34bwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3dka")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_ga68t"]
+script = ExtResource("5_i24q8")
+name = "Gleeble"
+breed = "Gleeble"
+description = "gleeb"
+loaf = ExtResource("34_0wkop")
+happiness_bar_overlay = ExtResource("33_0lx88")
+outside_scene = ExtResource("11_oqa0s")
+inside_scene = ExtResource("9_xdr15")
+happiness_bar = ExtResource("7_xuk7t")
+walk = SubResource("SpriteFrames_8fu1g")
+spawn_weight = 4
+cafe_value = 20
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
+
+[sub_resource type="Resource" id="Resource_myvto"]
+script = ExtResource("5_i24q8")
+name = "Venn Diagram"
+breed = "Calico"
+description = "Calico lol"
+loaf = ExtResource("38_p75sm")
+happiness_bar_overlay = ExtResource("37_3uwtb")
+outside_scene = ExtResource("11_oqa0s")
+inside_scene = ExtResource("9_xdr15")
+happiness_bar = ExtResource("7_xuk7t")
+walk = ExtResource("39_dnmxa")
+spawn_weight = 6
+cafe_value = 12
+metadata/_custom_type_script = "uid://c0olgupo47gmq"
 
 [node name="Game" type="Node2D" unique_id=1386217610]
 z_as_relative = false
@@ -22,8 +345,6 @@ inside_scene = ExtResource("2_n5ebr")
 outside_scene = ExtResource("2_0aill")
 
 [node name="GlobalUI" parent="." unique_id=109021020 instance=ExtResource("4_lpx4e")]
-cat_inventory = null
-is_open = null
 
 [node name="OutsideSpawn" type="Marker2D" parent="." unique_id=687460864]
 position = Vector2(-652, -239)
@@ -33,6 +354,7 @@ position = Vector2(12, -31)
 
 [node name="Player" parent="." unique_id=2088908881 instance=ExtResource("9_8i2kb")]
 position = Vector2(-645, -277)
+scale = Vector2(2, 2)
 
 [node name="Outside" parent="." unique_id=1225810967 instance=ExtResource("2_0aill")]
-possible_cats = Array[ExtResource("5_i24q8")]([ExtResource("6_5fe3y"), ExtResource("7_mdhdh"), ExtResource("8_6sdns"), ExtResource("9_q06ww"), ExtResource("10_d8h1w"), ExtResource("11_kb02g"), ExtResource("12_fqxx5"), null])
+possible_cats = Array[ExtResource("5_i24q8")]([SubResource("Resource_mo6uq"), SubResource("Resource_m5bhp"), SubResource("Resource_kc8uy"), SubResource("Resource_vg4i6"), SubResource("Resource_ggkcb"), SubResource("Resource_tq0ex"), SubResource("Resource_hcyuq"), SubResource("Resource_01a5h"), SubResource("Resource_ga68t"), SubResource("Resource_myvto")])

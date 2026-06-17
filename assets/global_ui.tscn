@@ -11,9 +11,9 @@
 [ext_resource type="Resource" uid="uid://r1sdgpk0csis" path="res://cats/asli.tres" id="8_0t2by"]
 [ext_resource type="Resource" uid="uid://ckju18pfip1b2" path="res://cats/marmalade.tres" id="10_0t2by"]
 [ext_resource type="Resource" uid="uid://c231282plh1uu" path="res://cats/miffy.tres" id="11_a1hqd"]
-[ext_resource type="Resource" uid="uid://b3o8opaoa8awl" path="res://calico.tres" id="12_27h5q"]
+[ext_resource type="Resource" uid="uid://b3o8opaoa8awl" path="res://cats/calico.tres" id="12_27h5q"]
 [ext_resource type="Resource" uid="uid://bjpyhjgxn6rbw" path="res://cats/nestle.tres" id="13_sphb4"]
-[ext_resource type="Resource" uid="uid://ckbxkp3v2rsxj" path="res://gleeble.tres" id="20_gmwai"]
+[ext_resource type="Resource" uid="uid://ckbxkp3v2rsxj" path="res://cats/gleeble.tres" id="20_gmwai"]
 [ext_resource type="PackedScene" uid="uid://cx7l7dbovq58l" path="res://assets/cafe_progress.tscn" id="21_27h5q"]
 [ext_resource type="Script" uid="uid://bs7yrobwaje6" path="res://assets/control.gd" id="21_gmwai"]
 

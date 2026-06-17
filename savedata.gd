@@ -31,7 +31,7 @@ static var amount_changed = 0
 static var most_recent_cat = ""
 static var cafe_progress = 1
 static var cheats_on = false
-
+static var favourite_cat = "Miffy"
 
 func _init() -> void:
 	pass

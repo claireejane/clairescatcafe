@@ -18,4 +18,5 @@ func set_found(cat_data) -> void:
 	if (cat_data in ui.cat_inventory):
 		icon.set_texture(cat_data.loaf)
 		icon.show()
+		print("showing in inv")
 	

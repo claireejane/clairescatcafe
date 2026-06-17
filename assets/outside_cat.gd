@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var cat_data: CatData
 @export var congrats: Array[String] = []
 @export var all_cats: Array[CharacterBody2D] = []
-
+var all_cats_found: Dictionary = {"Vicky": 0, "Barney Stinson": 0, "Trixie": 0, "Asli": 0, "Lily":0, "Marmalade": 0, "Miffy": 0, "Venn Diagram": 0, "Nestle": 0, "Gleeble": 0}
 signal cat_found(cat_data: CatData)
 
 const SPEED = 300.0
@@ -16,7 +16,6 @@ const SPEED = 300.0
 @onready var idle_duration: Timer = $IdleDuration
 @onready var t_popup: Timer = $PopupTime
 @onready var self_destruct: Timer = $SelfDestruct
-@onready var label: Label = $CanvasLayer/Label
 @onready var outside: Node2D= $".."
 
 var next_position: Vector2
@@ -29,7 +28,7 @@ var label_congrats: Label
 var label_cat_name: Label
 var cafe_bonus: Label
 var difficulty: Label
-
+var curr_max = 0
 
 func _ready() -> void:
 	call_deferred("setup_ui_labels")
@@ -51,7 +50,7 @@ func setup_ui_labels() -> void:
 	difficulty = GameUtility.get_label("Difficulty")
 
 	hide_text()
-	label.hide()
+
 
 
 func _physics_process(delta: float) -> void:
@@ -61,16 +60,17 @@ func _physics_process(delta: float) -> void:
 		SaveData.cheats_on = true
 	if Input.is_action_just_pressed("get") and player_near:
 		collect_cat()
-		if SaveData.cafe_progress == 100 and SaveData.amount_changed>2 or SaveData.cheats_on:
+		if SaveData.cafe_progress == 100 and SaveData.amount_changed>2:
 			print("100% complete") 
 			hide()
-			label.show()
 			t_popup.wait_time = 10
 			t_popup.start()
 			#here
 			outside.show_win_screen()
-	
-
+	while all_cats.size() > 20:
+		print("too many cats!")
+		all_cats[0].queue_free()
+		print(all_cats.size())
 		
 
 
@@ -83,16 +83,20 @@ func collect_cat() -> void:
 
 	var is_new_cat :bool = cat_data not in ui.cat_inventory
 
+	var cat_name = cat_data.name
+	all_cats_found[cat_name] += 1
+	if all_cats_found[cat_name] > curr_max:
+		curr_max = all_cats_found[cat_name]
+		SaveData.favourite_cat = cat_name
+
 	if is_new_cat:
 		show_cat_popup()
 
 	cat_found.emit(cat_data)
 
 	print("should have found")
-	if SaveData.cafe_progress != 100 and not SaveData.cheats_on:
-	
-		# Kill this exact cat instance.
-		queue_free()
+
+	queue_free()
 
 
 func show_cat_popup() -> void:
@@ -178,7 +182,7 @@ func _on_idle_duration_timeout() -> void:
 
 func _on_popup_time_timeout() -> void:
 	hide_text()
-	label.hide()
+	
 
 
 func hide_text() -> void:
@@ -190,9 +194,3 @@ func hide_text() -> void:
 		cafe_bonus.hide()
 	if difficulty:
 		difficulty.hide()
-
-func deletus() -> void:
-	self_destruct.start()
-	
-func _on_self_destruct_timeout() -> void:
-	queue_free()
