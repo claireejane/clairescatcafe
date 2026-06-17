@@ -9,13 +9,14 @@ class_name Game extends Node2D
 #@onready var white_cat_bar: TextureProgressBar = $Cafe/UI/WhiteCatBar
 @onready var cafe_door: CollisionShape2D = $Cafe/Door/DoorIn
 @onready var outside_door: CollisionShape2D = $Outside/Door/DoorIn
-
+var starttime
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("starting outside")
 	change_to_outside()
 	current_scene.change_scene.connect(_on_change_scene)
+	starttime = Time.get_unix_time_from_system()
 
 	
 	

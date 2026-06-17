@@ -255,6 +255,19 @@ theme_override_font_sizes/font_size = 32
 text = "Favourite Cat: Miffy"
 horizontal_alignment = 1
 
+[node name="Almost" type="Label" parent="Dialogue" unique_id=1305241333]
+visible = false
+offset_left = -44.0
+offset_top = 26.0
+offset_right = 1206.0
+offset_bottom = 99.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("16_gdcp3")
+theme_override_font_sizes/font_size = 40
+text = "Great job catching all the cats! 
+Now customize your cafe without letting their happiness drop!"
+horizontal_alignment = 1
+
 [node name="Timer" type="Timer" parent="." unique_id=1854980840]
 wait_time = 5.0
 one_shot = true
